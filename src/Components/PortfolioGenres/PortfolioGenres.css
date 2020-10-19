@@ -1,24 +1,36 @@
 #portfolioGenres {
     display: flex;
-    margin-bottom: 3rem;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
 }
 
 #portfolioGenres li {
-    text-align: center;
+    text-align: left;
+    margin: 0 1rem;
+    position: relative;
 }
 
 #portfolioGenres img {
-    border-radius: 50%;
-    width: 12rem;
-    height: 12rem;
+    border-radius: 10px;
+    width: 25rem;
+    height: 15rem;
     margin-bottom: 0.75rem;
     object-fit: cover;
 }
 #portfolioGenres p {
     font-size: 1.5rem;
     font-weight: 400;
-    color: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.75rem 0.5rem 0.75rem;
+    background-color: rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+    width: fit-content;
+    text-transform: capitalize;
 }
 
 /* ---------------------- */
@@ -30,20 +42,20 @@
 @media only screen and (max-width: 899px) {
 
     #portfolioGenres {
-        display: block;
         justify-content: center;
         margin-top: 2rem;
     }
 
+    #portfolioGenres li {
+        text-align: left;
+        margin: 0;
+        position: relative;
+    }
     #portfolioGenres img {
-        width: 15rem;
-        height: 15rem;
-        margin-bottom: 0.5rem;
-        object-fit: cover;
+        max-width: 100%;
     }
     #portfolioGenres p {
         font-size: 1.5rem;
-        margin-bottom: 1.5rem;
     }
 
 }
