@@ -1,0 +1,43 @@
+#gallery-container {
+    text-align: center;
+}
+
+.galleryImgs {
+    padding: 0.25rem;
+    margin: 0 auto;
+}
+.horizontalImg {
+    max-height: 27rem;
+    width: 45rem;
+    object-fit: cover;
+}
+.squareableImg {
+    height: 27rem;
+    width: 27rem;
+    object-fit: cover;
+}
+
+/* ---------------------- */
+/* ---------------------- */
+/* ---- MOBILE ONLY ----- */
+/* ---------------------- */
+/* ---------------------- */
+
+@media only screen and (max-width: 899px) {
+
+    .galleryImgs {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .horizontalImg {
+        max-height: unset;
+        width: 100%;
+        object-fit: cover;
+    }
+    .squareableImg {
+        height: unset;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+}

@@ -1,0 +1,51 @@
+#about-container h1 {
+    margin: 0.5rem 0;
+}
+
+#about-container p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 1rem;
+}
+
+#aboutProfile {
+    width: 30rem;
+    float: right;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* ---------------------- */
+/* ---------------------- */
+/* ---- MOBILE ONLY ----- */
+/* ---------------------- */
+/* ---------------------- */
+
+@media only screen and (max-width: 899px) {
+
+    #aboutProfile {
+        max-width: 95%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 1rem auto;
+        float: unset;
+        padding: unset;
+    }
+
+    #about-action * {
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
+
+    #about-container p {
+        font-weight: 200;
+    }
+    
+} */

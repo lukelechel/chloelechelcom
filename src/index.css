@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
 * {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,8 +14,10 @@ body {
 a {
     color: #1389d3;
     text-decoration: none;
+    font-weight: 400;
 }
 a:hover {
+    color: #209ce9;
     cursor: pointer;
     text-decoration: none;
 }
@@ -27,7 +29,32 @@ p {
 ul {
     list-style: none;
 }
-  
+
+.visible, .visible * {
+    display: unset;
+}
+.invisible, .invisible * {
+    display: none;
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
+
+    * {
+        color: white;
+    }
+    
+    body {
+        background-color: black;
+    }
+
+    p {
+        color: white;
+    }
+    
+} */
+
 /* ---------------------- */
 /* ---------------------- */
 /* ---- DESKTOP ONLY ---- */
@@ -36,7 +63,7 @@ ul {
 
 @media only screen and (min-width: 1300px) {
 
-    .mobileOnly {
+    .mobileOnly, .mobileOnly * {
         display: none;
     }
 
@@ -54,7 +81,7 @@ ul {
 
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
 
-    .mobileOnly {
+    .mobileOnly, .mobileOnly * {
         display: none;
     }
 
@@ -68,12 +95,16 @@ ul {
 
 @media only screen and (max-width: 768px) {
 
-    .desktopOnly {
-    display: none;
+    body {
+        margin: 0 1% 2rem 1%;
+    }
+
+    .desktopOnly, .desktopOnly * {
+        display: none;
     }
 
     .pageContent {
-        margin: 0 3%;
+        margin: 0 1%;
     }
 
 }

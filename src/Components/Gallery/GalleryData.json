@@ -1,0 +1,137 @@
+[
+
+    {
+        "title": "bay",
+        "alt": "",
+        "category": "travel",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "bee",
+        "alt": "",
+        "category": "nature",
+        "orientation": "horizontal",
+        "squareable": false
+    },
+    {
+        "title": "dad",
+        "alt": "",
+        "category": "couple",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "dangle",
+        "alt": "",
+        "category": "portrait",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "golden",
+        "alt": "",
+        "category": "couple",
+        "orientation": "horizontal",
+        "squareable": true
+    },
+    {
+        "title": "gorilla",
+        "alt": "",
+        "category": "nature",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "heyo",
+        "alt": "",
+        "category": "portrait",
+        "orientation": "horizontal",
+        "squareable": true
+    },
+    {
+        "title": "joy",
+        "alt": "",
+        "category": "couple",
+        "orientation": "horizontal",
+        "squareable": true
+    },
+    {
+        "title": "kiss",
+        "alt": "",
+        "category": "couple",
+        "orientation": "horizontal",
+        "squareable": false
+    },
+    {
+        "title": "lace",
+        "alt": "",
+        "category": "nature",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "lilly",
+        "alt": "",
+        "category": "nature",
+        "orientation": "horizontal",
+        "squareable": true
+    },
+    {
+        "title": "plant",
+        "alt": "",
+        "category": "nature",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "redwood",
+        "alt": "",
+        "category": "nature",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "ring",
+        "alt": "",
+        "category": "couple",
+        "orientation": "horizontal",
+        "squareable": true
+    },
+    {
+        "title": "self",
+        "alt": "",
+        "category": "portrait",
+        "orientation": "horizontal",
+        "squareable": true
+    },
+    {
+        "title": "shop",
+        "alt": "",
+        "category": "travel",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "spirit",
+        "alt": "",
+        "category": "portrait",
+        "orientation": "horizontal",
+        "squareable": true
+    },
+    {
+        "title": "taylor",
+        "alt": "",
+        "category": "portrait",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
+        "title": "vow",
+        "alt": "",
+        "category": "couple",
+        "orientation": "horizontal",
+        "squareable": false
+    }
+
+]

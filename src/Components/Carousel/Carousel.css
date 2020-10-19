@@ -1,0 +1,33 @@
+.carousel-container {
+    text-align: center;
+}
+
+.carouselImg-desktop {
+    max-height: 40rem;
+}
+.carouselImg-mobile {
+    width: 100%;
+}
+
+#carouselNavigation {
+    display: flex;
+    justify-content: center;
+}
+#carouselNavigation p {
+    margin: 0.5rem 0.5rem 3rem 0.5rem;
+    user-select: none;
+    color: black;
+}
+#carouselNavigation p:hover {
+    cursor: pointer;
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
+    
+    #carouselNavigation p {
+        color: white;
+    }
+    
+} */

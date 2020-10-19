@@ -1,0 +1,44 @@
+#collectionTitle {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: black;
+}
+#collectionTitle:before, #collectionTitle:after {
+    content: "";
+    display: inline-block;
+    width: 30%;
+    margin: 0 2rem 0 -55%;
+    vertical-align: middle;
+    border-bottom: 1px solid rgb(68, 60, 40, 0.35);
+}
+#collectionTitle:after {
+    margin: 0 -55% 0 2rem;
+}
+
+/* ---------------------- */
+/* ---------------------- */
+/* ---- MOBILE ONLY ----- */
+/* ---------------------- */
+/* ---------------------- */
+
+@media only screen and (max-width: 899px) {
+
+    #collectionTitle {
+        display: none;
+    }
+
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
+
+    #collectionTitle {
+        color: white;
+    }
+    
+    #collectionTitle:before, #collectionTitle:after {
+        border-bottom: 1px solid white;
+    }
+    
+} */

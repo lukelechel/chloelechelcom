@@ -1,0 +1,59 @@
+#portfolioGenres {
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-around;
+}
+
+#portfolioGenres li {
+    text-align: center;
+}
+
+#portfolioGenres img {
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    margin-bottom: 0.75rem;
+    object-fit: cover;
+}
+#portfolioGenres p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
+}
+
+/* ---------------------- */
+/* ---------------------- */
+/* ---- MOBILE ONLY ----- */
+/* ---------------------- */
+/* ---------------------- */
+
+@media only screen and (max-width: 899px) {
+
+    #portfolioGenres {
+        display: block;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    #portfolioGenres img {
+        width: 15rem;
+        height: 15rem;
+        margin-bottom: 0.5rem;
+        object-fit: cover;
+    }
+    #portfolioGenres p {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
+    
+    #portfolioGenres p {
+        color: white;
+    }
+    
+} */
