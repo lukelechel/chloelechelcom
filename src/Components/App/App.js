@@ -8,7 +8,6 @@ import Portraits from '../Portraits/Portraits'
 import Couples from '../Couples/Couples'
 import Nature from '../Nature/Nature'
 import Travel from '../Travel/Travel'
-import Pricing from '../Pricing/Pricing'
 import About from '../About/About'
 import Error from '../Error/Error'
 
@@ -24,8 +23,6 @@ function App() {
                     <Route path="/portfolio/couples" component={Couples} />
                     <Route path="/portfolio/nature" component={Nature} />
                     <Route path="/portfolio/travel" component={Travel} />
-
-                    <Route path="/pricing" component={Pricing} />
 
                     <Route path="/about" component={About} />
 
