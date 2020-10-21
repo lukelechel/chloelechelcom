@@ -1,4 +1,61 @@
+#main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+}
+
+.mainPhoto {
+    width: 26rem;
+    max-height: 40rem;
+    object-fit: cover;
+}
+
+#main-text {
+    display: block;
+    text-align: right;
+    margin: auto 0 5rem 0;
+}
+#main-text h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-top: -0.75rem;
+}
+#main-text h2 {
+    font-size: 3rem;
+    margin-right: 0.5rem;
+}
+#main-text p {
+    font-size: 1.5rem;
+    max-width: 60%;
+    float: right;
+    margin: 2.5rem 0 0 0;
+}
+
+#scrollForMore {
+    font-size: 1.3rem;
+    width: fit-content;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 46%;
+    right: 50%;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate { 
+    0% { 
+      opacity: 0.5; 
+    }
+
+    50% { 
+      opacity: 0.9; 
+    }
+
+    100% { 
+      opacity: 0.5; 
+    }
+  } 
+
 .workSample {
     max-width: 100%;
     object-fit: cover;
+    margin: 3rem 0;
 }
