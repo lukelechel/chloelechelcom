@@ -1,7 +1,6 @@
 import React from 'react'
 import './Portfolio.css'
 import NavBar from '../NavBar/NavBar'
-import CollectionTitle from '../CollectionTitle/CollectionTitle'
 import PortfolioGenres from '../PortfolioGenres/PortfolioGenres'
 import Gallery from '../Gallery/Gallery'
 
@@ -10,7 +9,6 @@ function Portfolio() {
         <div>
             <NavBar />
             <div id="portfolio-container" className="pageContent">
-                <CollectionTitle title="See my work" />
                 <PortfolioGenres />
                 <div id="spacing"></div>
                 <div className="desktopOnly"><Gallery /></div>
