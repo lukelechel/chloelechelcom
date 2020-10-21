@@ -10,6 +10,16 @@ const navBarLibrary = [
         alt: "Portfolio"
     },
     {
+        name: "Services",
+        link: "/services",
+        alt: "Services"
+    },
+    {
+        name: "Clients",
+        link: "/clients",
+        alt: "Clients"
+    },
+    {
         name: "About",
         link: "/about",
         alt: "About"
@@ -46,32 +56,22 @@ class NavBar extends React.Component {
         return (
             <div id="navBar-container">
                 <div id="navBar-desktop" className="desktopOnly">
-                    <a href="/">
-                        <img
-                            src="https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/mainProfile.jpg"
-                            alt="Chloe Lechel profile"
-                            id="desktop-profile-nav" />
+                    <a href="/" id="siteTitle">
+                        <h1>Chloe Lechel</h1>
                     </a>
-                    <div id="navBar-desktop-text">
-                        <a href="/">
-                            <h1>Chloe Lechel</h1>
-                        </a>
-                        <ul id="desktop-nav">
-                            {
-                                navBarLibrary.map(x => {
-                                    return (
-                                        <li key={x.name}>
-                                            <a href={x.link} alt={x.alt}>{x.name}</a>
-                                        </li>
-                                    )
-                                })
-                            }
-                            {/* <li>
-                                <Toggle switch={toggleDarkMode} />
-                            </li> */}
-                        </ul>
-                    </div>
+                    <ul id="navList-desktop">
+                        {
+                            navBarLibrary.map(x => {
+                                return (
+                                    <li key={x.name}>
+                                        <a href={x.link} alt={x.alt}>{x.name}</a>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
+
                 <div id="navBar-mobile" className="mobileOnly">
                     <picture>
                         {/* <source
