@@ -11,17 +11,17 @@ function Home() {
             <NavBar />
             <div className="pageContent">
                 <div id="main">
-                    <img src={`${awsResourceLibraryPrefix}mainProfile.jpg`} className="mainPhoto" />
+                    <img src={`${awsResourceLibraryPrefix}mainProfile.jpg`} id="mainPhoto" />
                     <div id="main-text">
                         <h2>You're about to look</h2>
-                        <h1>so good.</h1>
+                        <h1>so good<span className="desktopOnly">.</span></h1>
                         <p>
                             Chloe Lechel is a pro photographer based in Northeastern Indiana.
                         </p>
                     </div>
                 </div>
 
-                <p id="scrollForMore">scroll for more</p>
+                <p id="scrollForMore" className="desktopOnly">scroll for more</p>
 
                 <img src={`${awsResourceLibraryPrefix}work-samples/golden.jpg`} className="workSample" />
                 <img src={`${awsResourceLibraryPrefix}work-samples/spirit.jpg`} className="workSample" />
