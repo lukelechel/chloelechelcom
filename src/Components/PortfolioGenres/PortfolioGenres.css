@@ -5,32 +5,72 @@
     height: fit-content;
 }
 
-#portfolioGenres li {
-    text-align: left;
-    margin: 0.5rem 1rem;
-    position: relative;
+/* ---------------------- */
+/* ---------------------- */
+/* ---- DESKTOP ONLY ---- */
+/* ---------------------- */
+/* ---------------------- */
+
+@media only screen and (min-width: 1300px) {
+
+    #portfolioGenres img {
+        border-radius: 50%;
+        width: 15rem;
+        height: 15rem;
+        margin: 0.5rem 1rem;
+        object-fit: cover;
+    }
+
+    #portfolioGenres p {
+        font-size: 1.8rem;
+        width: fit-content;
+        text-transform: capitalize;
+        margin: 0 auto;
+    }
+
 }
 
-#portfolioGenres img {
-    border-radius: 10px;
-    width: 25rem;
-    height: 15rem;
-    margin-bottom: 0.75rem;
-    object-fit: cover;
-}
-#portfolioGenres p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 1rem;
-    padding: 0.4rem 0.75rem 0.5rem 0.75rem;
-    background-color: rgb(0, 0, 0, 0.3);
-    backdrop-filter: blur(3px);
-    border-radius: 5px;
-    width: fit-content;
-    text-transform: capitalize;
+/* ---------------------- */
+/* ---------------------- */
+/* ---- TABLET ONLY ----- */
+/* ---------------------- */
+/* ---------------------- */
+
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+
+    #portfolioGenres {
+        margin-top: 2rem;
+    }
+    
+    #portfolioGenres img {
+        border-radius: 10px;
+        width: 25rem;
+        height: 15rem;
+        margin: 1rem;
+        object-fit: cover;
+    }
+    
+    #portfolioGenres p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: white;
+        position: absolute;
+        bottom: 1.25rem;
+        left: 1rem;
+        padding: 0.4rem 0.75rem 0.5rem 0.75rem;
+        background-color: rgb(0, 0, 0, 0.3);
+        backdrop-filter: blur(3px);
+        border-radius: 5px;
+        width: fit-content;
+        text-transform: capitalize;
+    }
+
+    #portfolioGenres li {
+        text-align: left;
+        margin: 0;
+        position: relative;
+    }
+  
 }
 
 /* ---------------------- */
@@ -42,20 +82,36 @@
 @media only screen and (max-width: 899px) {
 
     #portfolioGenres {
-        justify-content: center;
         margin-top: 2rem;
+    }
+    
+    #portfolioGenres img {
+        border-radius: 10px;
+        width: 25rem;
+        height: 15rem;
+        margin-bottom: 0.75rem;
+        object-fit: cover;
+    }
+    
+    #portfolioGenres p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1rem;
+        padding: 0.4rem 0.75rem 0.5rem 0.75rem;
+        background-color: rgb(0, 0, 0, 0.3);
+        backdrop-filter: blur(3px);
+        border-radius: 5px;
+        width: fit-content;
+        text-transform: capitalize;
     }
 
     #portfolioGenres li {
         text-align: left;
         margin: 0;
         position: relative;
-    }
-    #portfolioGenres img {
-        max-width: 100%;
-    }
-    #portfolioGenres p {
-        font-size: 1.5rem;
     }
 
 }
