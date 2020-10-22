@@ -11,7 +11,7 @@ function Home() {
             <NavBar />
             <div className="pageContent">
                 <div id="main">
-                    <img src={`${awsResourceLibraryPrefix}mainProfile.jpg`} id="mainPhoto" />
+                    <img src={`${awsResourceLibraryPrefix}mainProfile.jpg`} id="mainPhoto" alt="Chloe Lechel profile" />
                     <div id="main-text">
                         <h2>You're about to look</h2>
                         <h1>so good<span className="desktopOnly">.</span></h1>
@@ -23,9 +23,9 @@ function Home() {
 
                 <p id="scrollForMore" className="desktopOnly">scroll for more</p>
 
-                <img src={`${awsResourceLibraryPrefix}work-samples/golden.jpg`} className="workSample" />
-                <img src={`${awsResourceLibraryPrefix}work-samples/spirit.jpg`} className="workSample" />
-                <img src={`${awsResourceLibraryPrefix}work-samples/lilly.jpg`} className="workSample" />
+                <img src={`${awsResourceLibraryPrefix}work-samples/golden.jpg`} className="workSample" alt="Couple kissing in the sun" />
+                <img src={`${awsResourceLibraryPrefix}work-samples/spirit.jpg`} className="workSample" alt="Girl with hands on the back of her head as she walks through a field" />
+                <img src={`${awsResourceLibraryPrefix}work-samples/lilly.jpg`} className="workSample" alt="Lillies on water" />
             </div>
         </div>
     )

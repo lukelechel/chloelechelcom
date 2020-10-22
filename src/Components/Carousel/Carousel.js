@@ -1,7 +1,7 @@
 import React from 'react'
 import './Carousel.css'
 
-import galleryData from '../Gallery/GalleryData.json'
+import photoData from '../../PhotoData.json'
 const awsResourceLibraryPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
 class Carousel extends React.Component {
@@ -10,7 +10,7 @@ class Carousel extends React.Component {
 
         this.state = {
             carouselIndex: 0,
-            carouselLength: galleryData.filter(x => x.category === props.category).length
+            carouselLength: photoData.filter(x => x.category === props.category).length
         }
 
         this.backASlide = this.backASlide.bind(this)
@@ -52,7 +52,7 @@ class Carousel extends React.Component {
             <div className="carousel-container">
                 <div id="carousel-desktop" className="desktopOnly">
                     {
-                        galleryData.filter(x => x.category === this.props.category).map((x, index) => {
+                        photoData.filter(x => x.category === this.props.category).map((x, index) => {
                             return (
                                 <div className={`${index === this.state.carouselIndex ? 'visible' : 'invisible'}`} key={x.title}>
                                     <img
@@ -71,7 +71,7 @@ class Carousel extends React.Component {
                 </div>
                 <div id="carousel-mobile" className="mobileOnly">
                     {
-                        galleryData.filter(x => x.category === this.props.category).map(x => {
+                        photoData.filter(x => x.category === this.props.category).map(x => {
                             return (
                                 <img
                                         src={`${awsResourceLibraryPrefix}${x.title}.jpg`}

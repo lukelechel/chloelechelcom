@@ -1,9 +1,9 @@
 import React from 'react'
 import './Gallery.css'
-import galleryData from './GalleryData.json'
+import photoData from '../../PhotoData.json'
 
-const horizontalImgs = galleryData.filter(x => x.orientation === 'horizontal')
-const squareableImgs = galleryData.filter(x => x.squareable === true)
+const horizontalImgs = photoData.filter(x => x.orientation === 'horizontal')
+const squareableImgs = photoData.filter(x => x.squareable === true)
 
 function getRandomHorizontalImg() {
     let randomHorizontalImg = horizontalImgs[Math.floor(Math.random() * horizontalImgs.length)]
