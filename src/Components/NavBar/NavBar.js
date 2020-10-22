@@ -1,8 +1,6 @@
 import React from 'react'
 import './NavBar.css'
 
-// import Toggle from '../Toggle/Toggle'
-
 const navBarLibrary = [
     {
         name: "Portfolio",
@@ -39,8 +37,6 @@ class NavBar extends React.Component {
             menuListOpen: false,
             darkMode: false
         }
-
-        // this.toggleDarkMode = this.toggleDarkMode.bind(this)
     }
 
     render() {
@@ -48,10 +44,6 @@ class NavBar extends React.Component {
         const toggleNavList = () => {
             return this.state.menuListOpen ? this.setState({menuListOpen: false}) : this.setState({menuListOpen: true})
         }
-
-        // function toggleDarkMode() {
-        //     return this.state.darkMode ? this.setState({darkMode: false}) : this.setState({darkMode: true})
-        // }
 
         return (
             <div id="navBar-container">
@@ -74,12 +66,6 @@ class NavBar extends React.Component {
 
                 <div id="navBar-mobile" className="mobileOnly">
                     <picture>
-                        {/* <source
-                            srcSet="../resources/icons/menu-white.svg"
-                            media="(prefers-color-scheme: dark)"
-                            alt="Navigation list icon"
-                            id="menuIcon"
-                            onClick={toggleNavList} /> */}
                             <img
                                 src="../resources/icons/menu-black.svg"
                                 alt="Navigation list icon"
@@ -100,9 +86,6 @@ class NavBar extends React.Component {
                             )
                         })
                     }
-                    {/* <li>
-                        <Toggle switch={toggleDarkMode} />
-                    </li> */}
                 </ul>
             </div>
         )
