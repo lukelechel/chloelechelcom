@@ -8,8 +8,6 @@ import Portraits from '../Portraits/Portraits'
 import Couples from '../Couples/Couples'
 import Nature from '../Nature/Nature'
 import Travel from '../Travel/Travel'
-import Services from '../Services/Services'
-import Clients from '../Clients/Clients'
 import About from '../About/About'
 import Error from '../Error/Error'
 
@@ -26,8 +24,6 @@ function App() {
                     <Route path="/portfolio/nature" component={Nature} />
                     <Route path="/portfolio/travel" component={Travel} />
 
-                    <Route path="/services" component={Services} />
-                    <Route path="/clients" component={Clients} />
                     <Route path="/about" component={About} />
 
                     <Route component={Error} />

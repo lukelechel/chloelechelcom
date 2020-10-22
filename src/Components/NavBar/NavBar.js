@@ -8,16 +8,6 @@ const navBarLibrary = [
         alt: "Portfolio"
     },
     {
-        name: "Services",
-        link: "/services",
-        alt: "Services"
-    },
-    {
-        name: "Clients",
-        link: "/clients",
-        alt: "Clients"
-    },
-    {
         name: "About",
         link: "/about",
         alt: "About"
@@ -56,7 +46,7 @@ class NavBar extends React.Component {
                             navBarLibrary.map(x => {
                                 return (
                                     <li key={x.name}>
-                                        <a href={x.link} alt={x.alt}>{x.name}</a>
+                                        <a href={x.link} alt={x.alt} rel="noopener noreferrer">{x.name}</a>
                                     </li>
                                 )
                             })

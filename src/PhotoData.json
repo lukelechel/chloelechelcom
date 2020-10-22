@@ -5,152 +5,133 @@
         "alt": "",
         "category": "travel",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "bee",
         "alt": "",
         "category": "nature",
         "orientation": "horizontal",
-        "squareable": false,
-        "clientName": null
+        "squareable": false
     },
     {
         "title": "dad",
         "alt": "",
         "category": "couple",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "dangle",
         "alt": "",
         "category": "portrait",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "golden",
         "alt": "",
         "category": "couple",
         "orientation": "horizontal",
-        "squareable": true,
-        "clientName": "EvanMiren"
+        "squareable": true
     },
     {
         "title": "gorilla",
         "alt": "",
         "category": "nature",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "heyo",
         "alt": "",
         "category": "portrait",
         "orientation": "horizontal",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "joy",
         "alt": "",
         "category": "couple",
         "orientation": "horizontal",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "kiss",
         "alt": "",
         "category": "couple",
         "orientation": "horizontal",
-        "squareable": false,
-        "clientName": null
+        "squareable": false
     },
     {
         "title": "lace",
         "alt": "",
         "category": "nature",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "lilly",
         "alt": "",
         "category": "nature",
         "orientation": "horizontal",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "plant",
         "alt": "",
         "category": "nature",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "redwood",
         "alt": "",
         "category": "nature",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "ring",
         "alt": "",
         "category": "couple",
         "orientation": "horizontal",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "self",
         "alt": "",
         "category": "portrait",
         "orientation": "horizontal",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "shop",
         "alt": "",
         "category": "travel",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "spirit",
         "alt": "",
         "category": "portrait",
         "orientation": "horizontal",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "taylor",
         "alt": "",
         "category": "portrait",
         "orientation": "vertical",
-        "squareable": true,
-        "clientName": null
+        "squareable": true
     },
     {
         "title": "vow",
         "alt": "",
         "category": "couple",
         "orientation": "horizontal",
-        "squareable": false,
-        "clientName": null
+        "squareable": false
     }
 
 ]
