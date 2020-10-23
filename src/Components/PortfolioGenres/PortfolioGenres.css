@@ -15,8 +15,8 @@
 
     #portfolioGenres img {
         border-radius: 50%;
-        width: 15rem;
-        height: 15rem;
+        width: 12.25rem;
+        height: 12.25rem;
         margin: 0.5rem 1rem;
         object-fit: cover;
     }
