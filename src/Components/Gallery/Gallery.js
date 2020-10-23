@@ -9,7 +9,7 @@ function getRandomHorizontalImg() {
     let randomHorizontalImg = horizontalImgs[Math.floor(Math.random() * horizontalImgs.length)]
     return (
         <img
-            src={`https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/${randomHorizontalImg.title}.jpg`}
+            src={`https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/${randomHorizontalImg.fileName}.jpg`}
             alt={randomHorizontalImg.alt}
             className="galleryImgs horizontalImg" />
     )
@@ -18,7 +18,7 @@ function getRandomSquareableImg() {
     let randomSquareableImg = squareableImgs[Math.floor(Math.random() * squareableImgs.length)]
     return (
         <img
-            src={`https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/${randomSquareableImg.title}.jpg`}
+            src={`https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/${randomSquareableImg.fileName}.jpg`}
             alt={randomSquareableImg.alt}
             className="galleryImgs squareableImg" />
     )

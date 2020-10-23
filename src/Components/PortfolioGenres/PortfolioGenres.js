@@ -1,28 +1,25 @@
 import React from 'react'
 import './PortfolioGenres.css'
+import photoData from '../../PhotoData.json'
 
-const awsResourceLibraryPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
+const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
 const portfolioGenreLibrary = [
     {
-        title: "portraits",
-        imgFileName: "spirit",
-        imgAlt: ""
+        categoryTitle: "portraits",
+        fileName: "CAB8171E-3485-4AAB-9875-AD86EF8957CF"
     },
     {
-        title: "couples",
-        imgFileName: "golden",
-        imgAlt: ""
+        categoryTitle: "couples",
+        fileName: "25D111F2-7266-4792-B73E-365BB171438B"
     },
     {
-        title: "nature",
-        imgFileName: "lilly",
-        imgAlt: ""
+        categoryTitle: "nature",
+        fileName: "5740DA5D-ADEA-44A5-BFD3-459B207CB066"
     },
     {
-        title: "travel",
-        imgFileName: "bay",
-        imgAlt: ""
+        categoryTitle: "travel",
+        fileName: "F24CBA41-B716-4A13-B702-85049064DEF1"
     }
 ]
 
@@ -31,13 +28,14 @@ function PortfolioGenres() {
         <ul id="portfolioGenres">
             {
                 portfolioGenreLibrary.map(x => {
+                    let imgAlt = photoData.filter(items => items.fileName === x.fileName)
                     return (
-                        <li key={x.title}>
-                            <a href={`/portfolio/${x.title}`}>
+                        <li key={x.categoryTitle}>
+                            <a href={`/portfolio/${x.categoryTitle}`}>
                                 <img
-                                    src={`${awsResourceLibraryPrefix}${x.imgFileName}.jpg`}
-                                    alt={x.imgAlt} />
-                                <p>{x.title}</p>
+                                    src={`${awsResourceLibWorkPrefix}${x.fileName}.jpg`}
+                                    alt={imgAlt} />
+                                <p>{x.categoryTitle}</p>
                             </a>
                         </li>
                     )
