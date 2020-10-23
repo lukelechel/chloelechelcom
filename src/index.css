@@ -86,6 +86,10 @@ ul {
         display: none;
     }
 
+    .pageContent {
+        margin: 2rem 3% 6rem 3%;
+    }
+
 }
 
 /* ---------------------- */

@@ -24,6 +24,7 @@
     font-size: 5rem;
     font-weight: 800;
     margin-top: -0.75rem;
+    word-spacing: -0.55rem;
 }
 #main-text h2 {
     font-size: 3rem;
@@ -57,7 +58,6 @@
         text-align: right;
         margin: auto 0 5rem 0;
     }
-
     #main-text p {
         float: right;
         max-width: 60%;

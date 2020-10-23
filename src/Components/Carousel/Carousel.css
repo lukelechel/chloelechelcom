@@ -4,6 +4,7 @@
 
 .carouselImg-desktop {
     max-height: 40rem;
+    max-width: 100%;
 }
 .carouselImg-mobile {
     width: 100%;

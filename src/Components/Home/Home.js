@@ -1,11 +1,16 @@
 import React from 'react'
 import './Home.css'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 import NavBar from '../NavBar/NavBar'
 
 const awsResourceLibraryPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
 
 function Home() {
+    AOS.init({
+        duration: 1200
+    })
     return (
         <div>
             <NavBar />
@@ -14,7 +19,7 @@ function Home() {
                     <img src={`${awsResourceLibraryPrefix}mainProfile.jpg`} id="mainPhoto" alt="Chloe Lechel profile" />
                     <div id="main-text">
                         <h2>You're about to look</h2>
-                        <h1>so good<span className="desktopOnly">.</span></h1>
+                        <h1 data-aos="fade-up" data-aos-once="true">so good<span className="desktopOnly">.</span></h1>
                         <p>
                             Chloe Lechel is a pro photographer based in Northeastern Indiana.
                         </p>

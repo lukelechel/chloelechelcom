@@ -2,7 +2,6 @@
     font-size: 3rem;
     margin-bottom: 1.5rem;
     padding-top: 1.25rem;
-    max-width: 40%;
 }
 
 #about-container p {
@@ -28,7 +27,21 @@
     100% { 
         opacity: 1; 
      } 
-} 
+}
+
+/* ---------------------- */
+/* ---------------------- */
+/* ---- DESKTOP ONLY ---- */
+/* ---------------------- */
+/* ---------------------- */
+
+@media only screen and (min-width: 1300px) {
+
+    #aboutContainer h1 {
+        max-width: 40%;
+    }
+  
+}
 
 /* ---------------------- */
 /* ---------------------- */
