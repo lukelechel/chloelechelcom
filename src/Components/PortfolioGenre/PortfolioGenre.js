@@ -7,7 +7,6 @@ import 'aos/dist/aos.css';
 
 import NavBar from '../NavBar/NavBar'
 
-const awsResourceLibBasePrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
 const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
 class PortfolioGenre extends React.Component {
@@ -46,9 +45,30 @@ class PortfolioGenre extends React.Component {
     getGenrePhotos() {
         const genrePhotos = photoData.filter(img => img.category === this.getGenreCategory())
 
+        // Rnadomize photoData array
+        let currentIndex = genrePhotos.length, tempValue, randomIndex
+
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+        
+            // And swap it with the current element
+            tempValue = genrePhotos[currentIndex];
+            genrePhotos[currentIndex] = genrePhotos[randomIndex];
+            genrePhotos[randomIndex] = tempValue;
+        }
+
         return genrePhotos.map((x, i) => {
             return (
-                <img src={`${awsResourceLibWorkPrefix}${x.fileName}.jpg`} alt={x.alt} className="genrePhoto" key={i} data-aos="fade-up" data-aos-once="true" />
+                <img
+                    src={`${awsResourceLibWorkPrefix}${x.fileName}.jpg`}
+                    alt={x.alt}
+                    className="genrePhoto"
+                    key={i}
+                        data-aos="fade-up"
+                        data-aos-once="true" />
             )
         })
     }
