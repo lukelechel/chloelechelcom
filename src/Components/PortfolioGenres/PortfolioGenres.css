@@ -87,6 +87,7 @@
     
     #portfolioGenres img {
         border-radius: 10px;
+        max-width: 100%;
         width: 25rem;
         height: 15rem;
         margin-bottom: 0.75rem;

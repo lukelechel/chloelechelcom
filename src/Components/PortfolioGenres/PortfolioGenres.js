@@ -32,14 +32,24 @@ function PortfolioGenres() {
     return (
         <ul id="portfolioGenres">
             {
-                portfolioGenreLibrary.map(x => {
+                portfolioGenreLibrary.map((x, i) => {
                     let imgAlt = photoData.filter(items => items.fileName === x.fileName)
                     return (
                         <li key={x.categoryTitle}>
                             <a href={`/portfolio/${x.categoryTitle}`}>
-                                <img
-                                    src={`${awsResourceLibWorkPrefix}${x.fileName}.jpg`}
-                                    alt={imgAlt} />
+                                <picture>
+                                    <source
+                                        srcSet={`
+                                            ${awsResourceLibWorkPrefix}${x.fileName}-small.webp 400w,
+                                            ${awsResourceLibWorkPrefix}${x.fileName}-medium.webp 1000w,
+                                            ${awsResourceLibWorkPrefix}${x.fileName}-large.webp 2000w
+                                            `}
+                                        type="image/webp" />
+                                    <img
+                                        src={`${awsResourceLibWorkPrefix}${x.fileName}.jpg`}
+                                        alt={imgAlt}
+                                        type="img/jpeg" />
+                                </picture>
                                 <p>{x.categoryTitle}</p>
                             </a>
                         </li>

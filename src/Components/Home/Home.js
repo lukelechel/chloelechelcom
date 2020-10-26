@@ -8,6 +8,21 @@ import NavBar from '../NavBar/NavBar'
 const awsResourceLibBasePrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
 const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
+const featuredPhotoLibrary = [
+    {
+        fileName: "25D111F2-7266-4792-B73E-365BB171438B",
+        alt: "A young couple kisses in the foreground while the sun glistens on a small waterfall in the background"
+    },
+    {
+        fileName: "CAB8171E-3485-4AAB-9875-AD86EF8957CF",
+        alt: "A young woman stands in an open field with her hands behind her head looking into the distance"
+    },
+    {
+        fileName: "5740DA5D-ADEA-44A5-BFD3-459B207CB066",
+        alt: "Lilly pads"
+    }
+]
+
 function Home() {
     AOS.init({
         duration: 1200
@@ -29,9 +44,27 @@ function Home() {
 
                 <p id="scrollForMore" className="desktopOnly">scroll for more</p>
 
-                <img src={`${awsResourceLibWorkPrefix}25D111F2-7266-4792-B73E-365BB171438B.jpg`} className="workSample" alt="Couple kissing in the sun" />
-                <img src={`${awsResourceLibWorkPrefix}CAB8171E-3485-4AAB-9875-AD86EF8957CF.jpg`} className="workSample" alt="Girl with hands on the back of her head as she walks through a field" />
-                <img src={`${awsResourceLibWorkPrefix}5740DA5D-ADEA-44A5-BFD3-459B207CB066.jpg`} className="workSample" alt="Lillies on water" />
+                {
+                    featuredPhotoLibrary.map((x, i) => {
+                        return (
+                            <picture key={i}>
+                                <source
+                                    srcSet={`
+                                            ${awsResourceLibWorkPrefix}${x.fileName}-small.webp 400w,
+                                            ${awsResourceLibWorkPrefix}${x.fileName}-medium.webp 1000w
+                                            `}
+                                    type="image/webp" />
+                                <img
+                                    src={`${awsResourceLibWorkPrefix}${x.fileName}.jpg`}
+                                    alt={x.alt}
+                                    className="workSample"
+                                        data-aos="fade-up"
+                                        data-aos-once="true" />
+                            </picture>
+                        )
+                    })
+                }
+
             </div>
         </div>
     )

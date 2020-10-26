@@ -4,16 +4,26 @@ import './About.css'
 import NavBar from '../NavBar/NavBar'
 
 const emoji = require("emoji-dictionary")
+const awsResourceLibBasePrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
 
 function About() {
     return (
         <div>
             <NavBar />
             <div id="about-container" className="pageContent">
-                <img
-                    src="https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/aboutProfile.jpg"
-                    alt="In the foreground, the sun shines on Chloe's face. A body of water and trees are in the background."
-                    id="aboutProfile" />
+                <picture>
+                    <source
+                        srcSet={`
+                            ${awsResourceLibBasePrefix}aboutProfile-small.webp 400w,
+                            ${awsResourceLibBasePrefix}aboutProfile-medium.webp 1000w,
+                            ${awsResourceLibBasePrefix}aboutProfile-large.webp 2000w
+                            `}
+                        type="image/webp" />
+                    <img
+                        src={`${awsResourceLibBasePrefix}aboutProfile.jpg`}
+                        alt="In the foreground, the sun shines on Chloe's face. A body of water and trees are in the background."
+                        id="aboutProfile" />
+                </picture>
                 <div id="about-text">
                     <h1>About the photographer</h1>
                     <p>Hi, I'm Chloe. <span role="img" aria-label={emoji.getName("🥰")}>🥰</span></p>
