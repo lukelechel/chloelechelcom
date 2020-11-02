@@ -11,6 +11,10 @@ class Modal extends React.Component {
         super()
 
         this.lastImage = this.lastImage.bind(this)
+
+        this.state = {
+            currentImgIndex: 0
+        }
     }
 
     lastImage() {
@@ -35,7 +39,7 @@ class Modal extends React.Component {
             <div id="modal-container" className={this.props.modalVisibility ? 'visible' : 'invisible'}>
                 <button id="modal-close" onClick={this.props.closeModal}>×</button>
                 <img
-                    src={`${awsResourceLibWorkPrefix}${this.state.currentImg}.jpg`}
+                    src={`${awsResourceLibWorkPrefix}${this.props.modalArray[this.state.currentImgIndex]}.jpg`}
                     alt={this.props.modalAlt}
                     type="img/jpeg"
                     id="modal-image"

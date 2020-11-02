@@ -23,7 +23,7 @@ class PortfolioGenre extends React.Component {
             modalVisible: false,
             modalImage: "",
             modalAlt: "",
-            modalArray: {}
+            modalArray: []
         }
     }
 
@@ -89,6 +89,7 @@ class PortfolioGenre extends React.Component {
         }
 
         return genrePhotos.map((x, i) => {
+            this.state.modalArray.push(x.fileName)
             return (
                 <picture key={i} onClick={() => this.launchModal(x.fileName, x.alt, genrePhotos)}>
                     <source
@@ -116,13 +117,28 @@ class PortfolioGenre extends React.Component {
             <div id="genre-container">
                 <NavBar />
                 <div className="pageContent">
-                    <Modal
+                    {/* <Modal
                         modalVisibility={this.state.modalVisible}
                         closeModal={this.closeModal}
                         modalImage={this.state.modalImage}
                         modalAlt={this.state.modalAlt}
                         modalArray={this.state.modalArray}>
-                    </Modal>
+                    </Modal> */}
+                    
+                    {
+                        this.state.modalVisible
+                            ?
+                                <Modal
+                                    modalVisibility={this.state.modalVisible}
+                                    closeModal={this.closeModal}
+                                    modalImage={this.state.modalImage}
+                                    modalAlt={this.state.modalAlt}
+                                    modalArray={this.state.modalArray}
+                                    />
+                            :
+                                ''
+                    }
+
                     <h1 id="categoryTitle">{this.getGenre()}</h1>
                     {this.getGenrePhotos()}
                 </div>

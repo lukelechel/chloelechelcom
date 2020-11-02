@@ -42,3 +42,19 @@
     font-size: 1.5rem;
     word-spacing: 1rem;
 }
+
+.modalSee {
+    opacity: 1;
+    animation: see 0.3s;
+}
+@keyframes see {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.modalNoSee {
+    opacity: 0;
+}
