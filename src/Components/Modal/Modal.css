@@ -1,0 +1,44 @@
+#modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+#modal-close {
+    border: none;
+    background-color: white;
+    font-size: 2.3rem;
+
+    position: absolute;
+    top: 0.25rem;
+    right: 1.25rem;
+}
+#modal-close:hover {
+    cursor: pointer;
+    color: rgb(173, 196, 208);
+    transition: ease-in 130ms;
+}
+
+#modal-image {
+    max-width: 95%;
+    max-height: 45rem;
+    margin: 4rem 0;
+    padding: 0.5rem 0 2rem 0;
+}
+
+#carousel-nav {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    width: fit-content;
+    font-size: 1.5rem;
+    word-spacing: 1rem;
+}

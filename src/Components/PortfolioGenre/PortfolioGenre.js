@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 import NavBar from '../NavBar/NavBar'
+import Modal from '../Modal/Modal'
 
 const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
@@ -16,6 +17,14 @@ class PortfolioGenre extends React.Component {
         this.getGenre = this.getGenre.bind(this)
         this.getGenreCategory = this.getGenreCategory.bind(this)
         this.getGenrePhotos = this.getGenrePhotos.bind(this)
+        this.closeModal = this.closeModal.bind(this)
+
+        this.state = {
+            modalVisible: false,
+            modalImage: "",
+            modalAlt: "",
+            modalArray: {}
+        }
     }
 
     componentDidMount() {
@@ -24,12 +33,33 @@ class PortfolioGenre extends React.Component {
         })
     }
 
+    launchModal(imageName, altText, modalArray) {
+        this.setState({
+            modalVisible: true,
+            modalImage: `${imageName}`,
+            modalAlt: `${altText}`,
+            modalArray: modalArray
+        })
+
+        document.body.style.position = 'fixed'
+        document.body.style.top = `-${window.scrollY}px`
+    }
+    closeModal() {
+        this.setState({
+            modalVisible: false
+        })
+
+        document.body.style.position = ''
+        const scrollY = document.body.style.top
+        document.body.style.top = ''
+        window.scrollTo(0, parseInt(scrollY || '0') * -1)
+    }
+
     getGenre() {
         const { match: { params } } = this.props
         const currentGenre = params.id
         return currentGenre
     }
-    
     getGenreCategory() {
         let genre = this.getGenre()
         if (genre === 'portraits') {
@@ -42,7 +72,6 @@ class PortfolioGenre extends React.Component {
             return genre
         }
     }
-
     getGenrePhotos() {
         const genrePhotos = photoData.filter(img => img.category === this.getGenreCategory())
 
@@ -50,11 +79,9 @@ class PortfolioGenre extends React.Component {
         let currentIndex = genrePhotos.length, tempValue, randomIndex
 
         while (0 !== currentIndex) {
-
             // Pick a remaining element
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
-        
             // And swap it with the current element
             tempValue = genrePhotos[currentIndex];
             genrePhotos[currentIndex] = genrePhotos[randomIndex];
@@ -63,7 +90,7 @@ class PortfolioGenre extends React.Component {
 
         return genrePhotos.map((x, i) => {
             return (
-                <picture key={i}>
+                <picture key={i} onClick={() => this.launchModal(x.fileName, x.alt, genrePhotos)}>
                     <source
                         srcSet={`
                             ${awsResourceLibWorkPrefix}${x.fileName}-small.webp 400w,
@@ -89,6 +116,13 @@ class PortfolioGenre extends React.Component {
             <div id="genre-container">
                 <NavBar />
                 <div className="pageContent">
+                    <Modal
+                        modalVisibility={this.state.modalVisible}
+                        closeModal={this.closeModal}
+                        modalImage={this.state.modalImage}
+                        modalAlt={this.state.modalAlt}
+                        modalArray={this.state.modalArray}>
+                    </Modal>
                     <h1 id="categoryTitle">{this.getGenre()}</h1>
                     {this.getGenrePhotos()}
                 </div>

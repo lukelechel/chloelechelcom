@@ -70,21 +70,19 @@
         bottom: 1.5rem;
         left: 46%;
         right: 50%;
-        animation: animate 3s linear infinite;
+        animation: bounce 0.8s infinite alternate
     }
-    @keyframes animate { 
-        0% { 
-          opacity: 0.5; 
+    @keyframes bounce {
+        0% {
+            transform:translateY(0);
+            opacity: 0.7;
         }
-    
-        50% { 
-          opacity: 0.9; 
+
+        to {
+            transform:translateY(-10px);
+            opacity: 0.9;
         }
-    
-        100% { 
-          opacity: 0.5; 
-        }
-      } 
+    }
 
 }
 
