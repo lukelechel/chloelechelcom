@@ -2,28 +2,5 @@
     font-size: 3rem;
     text-transform: capitalize;
     margin-bottom: 1rem;
-}
-
-#genre-container {
-    display: block;
     text-align: center;
-}
-
-.genrePhoto {
-    max-width: 100%;
-    max-height: 50rem;
-    margin: 1rem 1rem;
-}
-
-/* ---------------------- */
-/* ---------------------- */
-/* ---- MOBILE ONLY ----- */
-/* ---------------------- */
-/* ---------------------- */
-
-@media only screen and (max-width: 899px) {
-
-    .genrePhoto {
-        margin: 0.5rem 0;
-    }
 }
