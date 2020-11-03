@@ -9,10 +9,6 @@ const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.
 class Modal extends React.Component {
     constructor(props) {
         super()
-
-        this.state = {
-            
-        }
     }
 
     render() {

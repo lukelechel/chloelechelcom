@@ -15,8 +15,11 @@ class PortfolioGenre extends React.Component {
     constructor(props) {
         super()
 
+        this.imageSelected = this.imageSelected.bind(this)
+
         this.state = {
-            genrePhotoArray: []
+            genrePhotoArray: [],
+            selectedImage: ''
         }
     }
 
@@ -62,7 +65,13 @@ class PortfolioGenre extends React.Component {
             )
         })
         
-        return genrePhotoArray
+        return this.state.genrePhotoArray = genrePhotoArray
+    }
+
+    imageSelected(photoInfo) {
+        return this.setState({
+            selectedImage: photoInfo.fileName
+        }, () => console.log(this.state.selectedImage))
     }
 
     render() {
@@ -71,14 +80,14 @@ class PortfolioGenre extends React.Component {
             duration: 1200
         })
 
-        
+        this.getGenrePhotos()
 
         return (
             <div id="genre-container">
                 <NavBar />
                 <div className="pageContent">
                     <h1 id="categoryTitle">{this.getGenre()}</h1>
-                    <MainPortGenreList genrePhotoArray={this.state.genrePhotoArray} />
+                    <MainPortGenreList genrePhotoArray={this.state.genrePhotoArray} imageSelected={this.imageSelected} />
                     {/* <Modal /> */}
                 </div>
             </div>

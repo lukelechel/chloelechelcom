@@ -16,7 +16,7 @@ const MainPortGenreList = (props) => {
             {
                 props.genrePhotoArray.map((x, i) => {
                     return (
-                        <picture key={i}>
+                        <picture key={i} onClick={() => props.imageSelected(x)}>
                             <source
                                 srcSet={`
                                     ${awsResourceLibWorkPrefix}${x.fileName}-small.webp 400w,
