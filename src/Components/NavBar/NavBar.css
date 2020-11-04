@@ -25,22 +25,6 @@
     text-transform: lowercase;
 }
 
-/* @media (prefers-color-scheme: dark) {
-
-    #navBar-desktop #desktop-profile-nav {
-        box-shadow: none;
-    }
-    
-    #navBar-desktop-text h1, #navBar-desktop-text a h1 {
-        color: white;
-    }
-
-    #desktop-nav li a {
-        color: white;
-    }
-    
-} */
-
 /* ---------------------- */
 /* ---------------------- */
 /* ---- TABLET ONLY ----- */
@@ -103,19 +87,5 @@
         font-weight: 200;
         color: black;
     }
-
-
-
-    /* @media (prefers-color-scheme: dark) {
-    
-        #navBar-mobile h1, #navBar-mobile a {
-            color: white;
-        }
-    
-        #mobile-nav li a {
-            color: white;
-        }
-        
-    } */
 
 }

@@ -1,0 +1,9 @@
+#error-container {
+    text-align: center;
+}
+
+#error-container p {
+    font-size: 1.4rem;
+    text-align: left;
+    margin: 0.5rem 0 1rem 0;
+}
