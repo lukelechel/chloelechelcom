@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 import NavBar from '../NavBar/NavBar'
+import PortfolioGenres from '../PortfolioGenres/PortfolioGenres'
 import MainPortGenreList from '../MainPortGenreList/MainPortGenreList'
 import Modal from '../Modal/Modal'
 
@@ -162,6 +163,8 @@ class PortfolioGenre extends React.Component {
                             :
                             ''
                     }
+                    <h1 id="seeMore">See more</h1>
+                    <PortfolioGenres />
                 </div>
             </div>
         )
