@@ -9,18 +9,20 @@ import NavBar from '../NavBar/NavBar'
 import MainPortGenreList from '../MainPortGenreList/MainPortGenreList'
 import Modal from '../Modal/Modal'
 
-// const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
-
 class PortfolioGenre extends React.Component {
     constructor(props) {
         super()
 
         this.imageSelected = this.imageSelected.bind(this)
+        this.closeModal = this.closeModal.bind(this)
+        this.modalLastImg = this.modalLastImg.bind(this)
+        this.modalNextImg = this.modalNextImg.bind(this)
 
         this.state = {
             genrePhotoArray: [],
             selectedImage: '',
-            modalVisibility: false
+            modalVisibility: false,
+            loadingVisibility: false
         }
     }
 
@@ -76,23 +78,71 @@ class PortfolioGenre extends React.Component {
     }
 
     imageSelected(photoInfo) {
+        document.body.style.position = 'fixed'
+
         return this.setState({
             selectedImage: photoInfo,
             modalVisibility: true
         })
     }
 
-    // checkModalRender() {
-    //     if (this.state.modalVisibility) {
-    //         return <Modal selectedImage={this.state.selectedImage} modalVisibility={this.state.modalVisibility} />
-    //     }
-    // }
+    closeModal() {
+        document.body.style.position = ''
+
+        return this.setState({
+            selectedImage: '',
+            modalVisibility: false
+        })
+    }
+
+    modalLastImg() {
+        // initially selected img object, will update
+        let carouselIndex = this.state.selectedImage
+        // length of carousel
+        let carouselLength = this.state.genrePhotoArray.length
+        // get index position of selected image object
+        let indexOfSelectedImg = this.state.genrePhotoArray.findIndex(x => x.fileName === carouselIndex.fileName)
+
+        if (indexOfSelectedImg < 1) {
+            carouselIndex = carouselLength - 1
+        } else {
+            carouselIndex = indexOfSelectedImg - 1
+        }
+
+        // find img object associated with the new carousel index
+        let newCarouselImg = this.state.genrePhotoArray[carouselIndex]
+
+        return this.setState({
+            selectedImage: newCarouselImg
+        })
+    }
+    modalNextImg() {
+        // initially selected img object, will update
+        let carouselIndex = this.state.selectedImage
+        // length of carousel
+        let carouselLength = this.state.genrePhotoArray.length
+        // get index position of selected image object
+        let indexOfSelectedImg = this.state.genrePhotoArray.findIndex(x => x.fileName === carouselIndex.fileName)
+
+        if (indexOfSelectedImg === carouselLength - 1) {
+            carouselIndex = 0
+        } else {
+            carouselIndex = indexOfSelectedImg + 1
+        }
+
+        // find img object associated with the new carousel index
+        let newCarouselImg = this.state.genrePhotoArray[carouselIndex]
+
+        return this.setState({
+            selectedImage: newCarouselImg
+        })
+    }
 
     render() {
 
         AOS.init({
             duration: 1200
-        })        
+        })
 
         return (
             <div id="genre-container">
@@ -101,7 +151,16 @@ class PortfolioGenre extends React.Component {
                     <h1 id="categoryTitle">{this.getGenre()}</h1>
                     <MainPortGenreList genrePhotoArray={this.state.genrePhotoArray} imageSelected={this.imageSelected} />
                     {
-                        this.state.modalVisibility ? <Modal selectedImage={this.state.selectedImage} modalVisibility={this.state.modalVisibility} /> : ''
+                        this.state.modalVisibility ?
+                            <Modal
+                                selectedImage={this.state.selectedImage}
+                                modalVisibility={this.state.modalVisibility}
+                                loadingVisibility={this.state.loadingVisibility}
+                                closeModal={this.closeModal}
+                                lastImg={this.modalLastImg}
+                                nextImg={this.modalNextImg} />
+                            :
+                            ''
                     }
                 </div>
             </div>

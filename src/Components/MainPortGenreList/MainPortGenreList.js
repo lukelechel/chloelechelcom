@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
 const MainPortGenreList = (props) => {
+    
     AOS.init({
         duration: 1200
     })

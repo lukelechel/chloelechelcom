@@ -49,15 +49,6 @@
 
 .modalVisible {
     opacity: 1;
-    animation: see 0.3s;
-}
-@keyframes see {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 .modalInvisible {
     opacity: 0;
