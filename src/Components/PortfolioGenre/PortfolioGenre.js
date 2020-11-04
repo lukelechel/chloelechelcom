@@ -31,12 +31,14 @@ class PortfolioGenre extends React.Component {
         this.getGenrePhotos()
     }
 
-    getGenre() {
-        // Get title
+    getGenreTitle() {
         const { match: { params } } = this.props
         const currentGenre = params.id
+        return currentGenre
+    }
 
-        // Refine title
+    getRefinedGenreTitle() {
+        let currentGenre = this.getGenreTitle()
         if (currentGenre === 'portraits') {
             return 'portrait'
         } else if (currentGenre === 'couples') {
@@ -50,7 +52,7 @@ class PortfolioGenre extends React.Component {
 
     getGenrePhotos() {
         // Save the right category of images
-        const genrePhotos = photoData.filter(img => img.category === this.getGenre())
+        const genrePhotos = photoData.filter(img => img.category === this.getRefinedGenreTitle())
 
         // Rnadomize photoData array
         let thisIndex = genrePhotos.length, tempValue, randomIndex
@@ -149,7 +151,7 @@ class PortfolioGenre extends React.Component {
             <div id="genre-container">
                 <NavBar />
                 <div className="pageContent">
-                    <h1 id="categoryTitle">{this.getGenre()}</h1>
+                    <h1 id="categoryTitle">{this.getGenreTitle()}</h1>
                     <MainPortGenreList genrePhotoArray={this.state.genrePhotoArray} imageSelected={this.imageSelected} />
                     {
                         this.state.modalVisibility ?
