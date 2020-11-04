@@ -25,7 +25,8 @@ const featuredPhotoLibrary = [
 
 function Home() {
     AOS.init({
-        duration: 1200
+        duration: 1200,
+        once: true
     })
     return (
         <div>
@@ -35,9 +36,17 @@ function Home() {
                     <img src={`${awsResourceLibBasePrefix}mainProfile.jpg`} id="mainPhoto" alt="Chloe Lechel profile" />
                     <div id="main-text">
                         <h2>You're about to look</h2>
-                        <h1 data-aos="fade-up" data-aos-once="true">so good<span className="desktopOnly">.</span></h1>
-                        <p>
+                        <h1 data-aos="fade-right">so good<span className="desktopOnly">.</span></h1>
+                        <p id="description">
                             Chloe Lechel is a pro photographer based in Northeastern Indiana.
+                        </p>
+                        <p id="bookActionButton">
+                            <a
+                                href="https://www.instagram.com/chloelechelphotography/"
+                                alt="Chloe Lechel Photography on Instagram"
+                                rel="noopener noreferrer">
+                                Book your session on Instagram
+                            </a>
                         </p>
                     </div>
                 </div>

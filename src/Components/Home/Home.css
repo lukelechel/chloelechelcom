@@ -24,15 +24,27 @@
     font-size: 5rem;
     font-weight: 800;
     margin-top: -0.75rem;
+    margin-bottom: 2.5rem;
     word-spacing: -0.55rem;
 }
 #main-text h2 {
     font-size: 3rem;
     margin-right: 0.5rem;
 }
-#main-text p {
+#description {
     font-size: 1.5rem;
-    margin: 2.5rem 0 0 0;
+    margin-bottom: 2rem;
+}
+
+#bookActionButton * {
+    font-size: 1.4rem;
+    color: white;
+    background-color: rgb(92, 179, 194);
+    padding: 0.75rem 1.5rem;
+    border-radius: 35px;
+}
+#bookActionButton:hover {
+    cursor: pointer;
 }
 
 .workSample {
@@ -56,11 +68,14 @@
 
     #main-text {
         text-align: right;
-        margin: auto 0 5rem 0;
+        margin: auto 0 4rem 0;
     }
     #main-text p {
         float: right;
         max-width: 60%;
+    }
+    #bookActionButton {
+        max-width: 100%;
     }
 
     #scrollForMore {
@@ -107,12 +122,14 @@
 
     #main-text {
         text-align: right;
-        margin: auto 2rem 5rem 0;
+        margin: auto 2rem 3rem 0;
     }
-
     #main-text p {
         float: right;
         max-width: 80%;
+    }
+    #bookActionButton * {
+        font-size: 1.3rem;
     }
 
     #scrollForMore {
@@ -157,6 +174,9 @@
         text-align: center;
         max-width: unset;
         margin: 2rem 0 0 0;
+    }
+    #bookActionButton * {
+        font-size: 1.3rem;
     }
 
     .workSample {
