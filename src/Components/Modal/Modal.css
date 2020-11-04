@@ -46,6 +46,9 @@
 #carousel-nav span {
     margin: 1rem;
 }
+#carousel-nav span:hover {
+    cursor: pointer;
+}
 
 .modalVisible {
     opacity: 1;
