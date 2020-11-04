@@ -11,6 +11,14 @@ class Modal extends React.Component {
         super()
     }
 
+    lastImage() {
+        return console.log('last')
+    }
+
+    nextImage() {
+        return console.log('next')
+    }
+
     render() {
         const photoInfo = this.props.selectedImage
         return (
@@ -20,10 +28,10 @@ class Modal extends React.Component {
                     src={`${awsResourceLibWorkPrefix}${photoInfo.fileName}.jpg`}
                     alt={photoInfo.fileName}
                     id="modal-image" />
-                    <p id="carousel-nav">
+                <p id="carousel-nav">
                     <span onClick={this.lastImage}>last</span>
                     •
-                    next
+                    <span onClick={this.nextImage}>next</span>
                 </p>
             </div>
         )
