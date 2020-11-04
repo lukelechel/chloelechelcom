@@ -14,7 +14,7 @@
 
 #modal-close {
     border: none;
-    background-color: white;
+    background-color: transparent;
     font-size: 2.3rem;
 
     position: absolute;
@@ -30,7 +30,7 @@
 #modal-image {
     max-width: 95%;
     max-height: 45rem;
-    margin: 4rem 0;
+    margin: 4rem;
     padding: 0.5rem 0 2rem 0;
 }
 
@@ -43,7 +43,7 @@
     word-spacing: 1rem;
 }
 
-.modalSee {
+.modalVisible {
     opacity: 1;
     animation: see 0.3s;
 }
@@ -55,6 +55,6 @@
         opacity: 1;
     }
 }
-.modalNoSee {
+.modalInvisible {
     opacity: 0;
 }

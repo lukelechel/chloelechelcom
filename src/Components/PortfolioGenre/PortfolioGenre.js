@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 
 import NavBar from '../NavBar/NavBar'
 import MainPortGenreList from '../MainPortGenreList/MainPortGenreList'
-// import Modal from '../Modal/Modal'
+import Modal from '../Modal/Modal'
 
 // const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
@@ -19,8 +19,13 @@ class PortfolioGenre extends React.Component {
 
         this.state = {
             genrePhotoArray: [],
-            selectedImage: ''
+            selectedImage: '',
+            modalVisibility: false
         }
+    }
+
+    componentDidMount() {
+        this.getGenrePhotos()
     }
 
     getGenre() {
@@ -65,22 +70,29 @@ class PortfolioGenre extends React.Component {
             )
         })
         
-        return this.state.genrePhotoArray = genrePhotoArray
+        return this.setState({
+            genrePhotoArray: genrePhotoArray
+        })
     }
 
     imageSelected(photoInfo) {
         return this.setState({
-            selectedImage: photoInfo.fileName
-        }, () => console.log(this.state.selectedImage))
+            selectedImage: photoInfo,
+            modalVisibility: true
+        })
     }
+
+    // checkModalRender() {
+    //     if (this.state.modalVisibility) {
+    //         return <Modal selectedImage={this.state.selectedImage} modalVisibility={this.state.modalVisibility} />
+    //     }
+    // }
 
     render() {
 
         AOS.init({
             duration: 1200
-        })
-
-        this.getGenrePhotos()
+        })        
 
         return (
             <div id="genre-container">
@@ -88,7 +100,9 @@ class PortfolioGenre extends React.Component {
                 <div className="pageContent">
                     <h1 id="categoryTitle">{this.getGenre()}</h1>
                     <MainPortGenreList genrePhotoArray={this.state.genrePhotoArray} imageSelected={this.imageSelected} />
-                    {/* <Modal /> */}
+                    {
+                        this.state.modalVisibility ? <Modal selectedImage={this.state.selectedImage} modalVisibility={this.state.modalVisibility} /> : ''
+                    }
                 </div>
             </div>
         )

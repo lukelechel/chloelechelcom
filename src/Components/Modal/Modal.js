@@ -1,8 +1,8 @@
 import React from 'react'
 import './Modal.css'
 
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+// import AOS from 'aos'
+// import 'aos/dist/aos.css';
 
 const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
@@ -12,9 +12,19 @@ class Modal extends React.Component {
     }
 
     render() {
+        const photoInfo = this.props.selectedImage
         return (
-            <div id="modal-container" className={this.props.modalVisibility ? 'modalSee' : 'modalNoSee'}>
+            <div id="modal-container" className={this.props.modalVisibility ? 'modalVisible' : 'modalInvisible'}>
                 <button id="modal-close">×</button>
+                <img
+                    src={`${awsResourceLibWorkPrefix}${photoInfo.fileName}.jpg`}
+                    alt={photoInfo.fileName}
+                    id="modal-image" />
+                    <p id="carousel-nav">
+                    <span onClick={this.lastImage}>last</span>
+                    •
+                    next
+                </p>
             </div>
         )
     }
