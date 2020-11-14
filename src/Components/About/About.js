@@ -4,7 +4,7 @@ import './About.css'
 import NavBar from '../NavBar/NavBar'
 
 const emoji = require("emoji-dictionary")
-const awsResourceLibBasePrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
+const baseResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
 
 function About() {
     return (
@@ -14,13 +14,13 @@ function About() {
                 <picture>
                     <source
                         srcSet={`
-                            ${awsResourceLibBasePrefix}aboutProfile-small.webp 400w,
-                            ${awsResourceLibBasePrefix}aboutProfile-medium.webp 1000w,
-                            ${awsResourceLibBasePrefix}aboutProfile-large.webp 2000w
+                            ${baseResourceBucket}aboutProfile-small.webp 400w,
+                            ${baseResourceBucket}aboutProfile-medium.webp 1000w,
+                            ${baseResourceBucket}aboutProfile-large.webp 2000w
                             `}
                         type="image/webp" />
                     <img
-                        src={`${awsResourceLibBasePrefix}aboutProfile.jpg`}
+                        src={`${baseResourceBucket}aboutProfile.jpg`}
                         alt="In the foreground, the sun shines on Chloe's face. A body of water and trees are in the background."
                         id="aboutProfile" />
                 </picture>

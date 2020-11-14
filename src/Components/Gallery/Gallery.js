@@ -4,7 +4,7 @@ import photoData from '../../PhotoData.json'
 
 const horizontalImgs = photoData.filter(x => x.orientation === 'horizontal')
 const squareableImgs = photoData.filter(x => x.squareable === true)
-const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
+const workSampleResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
 function getRandomHorizontalImg() {
     let randomHorizontalImg = horizontalImgs[Math.floor(Math.random() * horizontalImgs.length)]
@@ -12,9 +12,9 @@ function getRandomHorizontalImg() {
         <picture>
             <source
                 srcSet={`
-                        ${awsResourceLibWorkPrefix}${randomHorizontalImg.fileName}-small.webp 400w,
-                        ${awsResourceLibWorkPrefix}${randomHorizontalImg.fileName}-medium.webp 1000w,
-                        ${awsResourceLibWorkPrefix}${randomHorizontalImg.fileName}-large.webp 2000w
+                        ${workSampleResourceBucket}${randomHorizontalImg.fileName}-small.webp 400w,
+                        ${workSampleResourceBucket}${randomHorizontalImg.fileName}-medium.webp 1000w,
+                        ${workSampleResourceBucket}${randomHorizontalImg.fileName}-large.webp 2000w
                         `}
                 type="image/webp" />
             <img
@@ -30,9 +30,9 @@ function getRandomSquareableImg() {
         <picture>
             <source
                 srcSet={`
-                        ${awsResourceLibWorkPrefix}${randomSquareableImg.fileName}-small.webp 400w,
-                        ${awsResourceLibWorkPrefix}${randomSquareableImg.fileName}-medium.webp 1000w,
-                        ${awsResourceLibWorkPrefix}${randomSquareableImg.fileName}-large.webp 2000w
+                        ${workSampleResourceBucket}${randomSquareableImg.fileName}-small.webp 400w,
+                        ${workSampleResourceBucket}${randomSquareableImg.fileName}-medium.webp 1000w,
+                        ${workSampleResourceBucket}${randomSquareableImg.fileName}-large.webp 2000w
                         `}
                 type="image/webp" />
             <img

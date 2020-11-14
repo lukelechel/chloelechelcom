@@ -4,7 +4,7 @@ import './MainPortGenreList.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
-const awsResourceLibWorkPrefix = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
+const workSampleResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
 
 const MainPortGenreList = (props) => {
     
@@ -20,13 +20,13 @@ const MainPortGenreList = (props) => {
                         <picture key={i} onClick={() => props.imageSelected(x)}>
                             <source
                                 srcSet={`
-                                    ${awsResourceLibWorkPrefix}${x.fileName}-small.webp 400w,
-                                    ${awsResourceLibWorkPrefix}${x.fileName}-medium.webp 1000w,
-                                    ${awsResourceLibWorkPrefix}${x.fileName}-large.webp 2000w
+                                    ${workSampleResourceBucket}${x.fileName}-small.webp 400w,
+                                    ${workSampleResourceBucket}${x.fileName}-medium.webp 1000w,
+                                    ${workSampleResourceBucket}${x.fileName}-large.webp 2000w
                                     `}
                                 type="image/webp" />
                             <img
-                                src={`${awsResourceLibWorkPrefix}${x.fileName}.jpg`}
+                                src={`${workSampleResourceBucket}${x.fileName}.jpg`}
                                 alt={x.alt}
                                 type="img/jpeg"
                                 className="genrePhoto"
