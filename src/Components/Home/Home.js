@@ -1,9 +1,11 @@
 import React from 'react'
 import './Home.css'
 
-import AOS from 'aos'
-import 'aos/dist/aos.css';
 import NavBar from '../NavBar/NavBar'
+import PortfolioGenres from '../PortfolioGenres/PortfolioGenres'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const baseResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
 const workSampleResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
@@ -74,6 +76,9 @@ function Home() {
                         )
                     })
                 }
+
+                <h1 id="seeMore">View my portfolio</h1>
+                <PortfolioGenres />
 
             </div>
         </div>
