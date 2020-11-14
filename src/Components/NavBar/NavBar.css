@@ -24,6 +24,9 @@
     color: black;
     text-transform: lowercase;
 }
+#navList-desktop li:last-child {
+    margin-right: 0;
+}
 
 /* ---------------------- */
 /* ---------------------- */
