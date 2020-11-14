@@ -1,6 +1,8 @@
 import React from 'react'
 import './NavBar.css'
 
+const baseResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
+
 const navBarLibrary = [
     {
         name: "Portfolio",
@@ -57,7 +59,7 @@ class NavBar extends React.Component {
                 <div id="navBar-mobile" className="mobileOnly">
                     <picture>
                             <img
-                                src="../resources/icons/menu-black.svg"
+                                src={`${baseResourceBucket}menu-black.svg`}
                                 alt="Navigation list icon"
                                 id="menuIcon"
                                 onClick={toggleNavList} />
