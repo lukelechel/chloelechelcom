@@ -9,35 +9,33 @@ import PortfolioGenre from '../PortfolioGenre/PortfolioGenre'
 import About from '../About/About'
 import Error from '../Error/Error'
 
-export default function App() {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" exact>
-                    <Nav />
-                    <Home />
-                </Route>
+const App = () => (<BrowserRouter>
+    <Switch>
+        <Route path="/" exact>
+            <Nav />
+            <Home />
+        </Route>
 
-                <Route path="/portfolio" exact>
-                    <Nav />
-                    <Portfolio />
-                </Route>
+        <Route path="/portfolio" exact>
+            <Nav />
+            <Portfolio />
+        </Route>
 
-                <Route path="/portfolio/:id">
-                    <Nav />
-                    <PortfolioGenre />
-                </Route>
+        <Route path="/portfolio/:id">
+            <Nav />
+            <PortfolioGenre />
+        </Route>
 
-                <Route path="/about">
-                    <Nav />
-                    <About />
-                </Route>
+        <Route path="/about">
+            <Nav />
+            <About />
+        </Route>
 
-                <Route>
-                    <Nav />
-                    <Error />
-                </Route>
-            </Switch>
-        </BrowserRouter>
-    )
-}
+        <Route>
+            <Nav />
+            <Error />
+        </Route>
+    </Switch>
+</BrowserRouter>)
+
+export default App

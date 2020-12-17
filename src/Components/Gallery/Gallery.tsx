@@ -1,4 +1,3 @@
-import React from 'react'
 import './Gallery.css'
 import photoData from '../../PhotoData.json'
 
@@ -39,11 +38,13 @@ function getRandomSquareableImg() {
     </picture>)
 }
 
-export default function Gallerya() { return (<div id="gallery-container">
+const Gallery = () => (<div id="gallery-container">
     { getRandomHorizontalImg() }
     { getRandomSquareableImg() }
     { getRandomSquareableImg() }
     { getRandomHorizontalImg() }
     { getRandomHorizontalImg() }
     { getRandomSquareableImg() }
-</div>) }
+</div>)
+
+export default Gallery

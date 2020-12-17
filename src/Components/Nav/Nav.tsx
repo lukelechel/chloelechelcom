@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Nav.css'
 
 const baseResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"

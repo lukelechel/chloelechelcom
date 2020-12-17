@@ -1,4 +1,3 @@
-import React from 'react'
 import './PortfolioGenres.css'
 
 const workSampleResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
@@ -31,7 +30,7 @@ const portfolioGenreLibrary = [
     }
 ]
 
-export default function PortfolioGenres() { return (<ul id="portfolioGenres">
+const PortfolioGenres = () => (<ul id="portfolioGenres">
     {
         portfolioGenreLibrary.map(x => {
             return (
@@ -55,4 +54,6 @@ export default function PortfolioGenres() { return (<ul id="portfolioGenres">
             )
         })
     }
-</ul>) }
+</ul>)
+
+export default PortfolioGenres

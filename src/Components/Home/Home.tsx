@@ -37,13 +37,6 @@ export default function Home() {
                 <p id="description">
                     Chloe Lechel is a pro photographer based in Northeastern Indiana.
                 </p>
-                <p id="bookActionButton">
-                    <a
-                        href="https://www.instagram.com/chloelechelphotography/"
-                        rel="noopener noreferrer">
-                        Book your session on Instagram
-                    </a>
-                </p>
             </div>
         </div>
 
