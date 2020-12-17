@@ -30,7 +30,21 @@ export default function Home() {
 
     return (<div className="pageContent">
         <div id="main">
-            <img src={`${baseResourceBucket}mainProfile.jpg`} id="mainPhoto" alt="Chloe Lechel profile" />
+            <picture id="mainPhoto">
+                    <source
+                        srcSet={`
+                                ${baseResourceBucket}mainProfile-small.webp 400w,
+                                ${baseResourceBucket}mainProfile-medium.webp 1000w,
+                                ${baseResourceBucket}mainProfile-large.webp 2000w
+                                `}
+                        type="image/webp" />
+                    <img
+                        src={`${baseResourceBucket}mainProfile.jpg`}
+                        alt="Chloe Lechel profile"
+                        className="workSample"
+                            data-aos="fade-up"
+                            data-aos-once="true" />
+                </picture>
             <div id="main-text">
                 <h2>You're about to look</h2>
                 <h1 data-aos="fade-right">so good<span className="desktopOnly">.</span></h1>
