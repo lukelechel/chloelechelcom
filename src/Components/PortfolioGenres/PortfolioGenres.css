@@ -41,6 +41,12 @@
     #portfolioGenres {
         margin-top: 2rem;
     }
+
+    #portfolioGenres li {
+        text-align: left;
+        margin: 0;
+        position: relative;
+    }
     
     #portfolioGenres img {
         border-radius: 10px;
@@ -52,23 +58,16 @@
     
     #portfolioGenres p {
         font-size: 1.5rem;
-        font-weight: 400;
+        font-weight: 800;
+        text-align: center;
+        width: 100%;
         color: white;
+        letter-spacing: 5px;
+        text-transform: uppercase;
         position: absolute;
-        bottom: 1.25rem;
-        left: 1rem;
-        padding: 0.4rem 0.75rem 0.5rem 0.75rem;
-        background-color: rgb(0, 0, 0, 0.3);
-        backdrop-filter: blur(3px);
-        border-radius: 5px;
-        width: fit-content;
-        text-transform: capitalize;
-    }
-
-    #portfolioGenres li {
-        text-align: left;
-        margin: 0;
-        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
   
 }
@@ -84,6 +83,13 @@
     #portfolioGenres {
         margin-top: 2rem;
     }
+
+    #portfolioGenres li {
+        text-align: left;
+        margin: 0;
+        position: relative;
+    }
+
     
     #portfolioGenres img {
         border-radius: 10px;
@@ -96,23 +102,17 @@
     
     #portfolioGenres p {
         font-size: 1.5rem;
-        font-weight: 400;
+        font-weight: 800;
+        text-align: center;
+        width: 100%;
         color: white;
+        letter-spacing: 5px;
+        text-transform: uppercase;
         position: absolute;
-        bottom: 0;
-        margin-bottom: 1rem;
-        padding: 0.4rem 0.75rem 0.5rem 0.75rem;
-        background-color: rgb(0, 0, 0, 0.3);
-        backdrop-filter: blur(3px);
-        border-radius: 5px;
-        width: auto;
-        text-transform: capitalize;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    #portfolioGenres li {
-        text-align: left;
-        margin: 0;
-        position: relative;
-    }
 
 }
