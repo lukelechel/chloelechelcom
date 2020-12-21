@@ -18,7 +18,7 @@ export default function MainPortGenreList(props:any) {
         {
             props.genrePhotoArray.map((x:GenrePhotoBase, i:number) => {
                 return (
-                    <picture key={i} onClick={() => props.imageSelected(x.fileName)}>
+                    <picture key={i} onClick={() => props.imageSelected(x.fileName, x.alt)}>
                         <source
                             srcSet={`
                                 ${workSampleResourceBucket}${x.fileName}-small.webp 400w,

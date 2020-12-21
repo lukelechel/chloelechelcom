@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './PortfolioGenre.css'
+import photoData from '../../PhotoData.json'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import PortfolioGenres from '../PortfolioGenres/PortfolioGenres'
 import MainPortGenreList from '../MainPortGenreList/MainPortGenreList'
 import Modal from '../Modal/Modal'
 import { useParams } from 'react-router-dom'
-import photoData from '../../PhotoData.json'
 
-interface ImageObjectBase {
+interface GenrePhotoBase {
     fileName: string,
     alt: string,
     category: string,
@@ -18,51 +18,22 @@ interface ImageObjectBase {
 
 export default function PortfolioGenre() {
 
-    const [genrePhotoArray, setGenrePhotoArray] = useState<ImageObjectBase[]>([])
+    // State mangement
+    const [genrePhotoArray, setGenrePhotoArray] = useState<GenrePhotoBase[]>([])
     const [selectedImage, setSelectedImage] = useState(String)
+    const [selectedImageAlt, setSelectedImageAlt] = useState(String)
     const [modalVisibility, setModalVisibility] = useState(false)
 
-    function GetGenreTitle() {
-        let { currentGenre }:any = useParams()
-        return currentGenre
-    }
-    function getRefinedGenreTitle() {
-        let currentGenre = GetGenreTitle()
-        if (currentGenre === 'portraits') {
-            return 'portrait'
-        } else if (currentGenre === 'couples') {
-            return 'couple'
-        } else if (currentGenre === 'weddings') {
-            return 'wedding'
-        } else {
-            return currentGenre
-        }
-    }
+    // Param grab called "id"
+    let { id }:any = useParams();
 
-    function getGenrePhotos() {
-        // Purpose: Gets right genre of photos, randomizes order, sets newly randomized array as genrePhotoArray state
-        // Save the right genre of images
-        let genrePhotos:any
-        genrePhotos = photoData.filter(x => x.category === getRefinedGenreTitle())
-        // Randomize the list of genre photos
-        let thisIndex = genrePhotos.length, tempValue, randomIndex
-        while (0!== thisIndex) {
-            // Pick a remaining element
-            randomIndex = Math.floor(Math.random() * thisIndex)
-            thisIndex -= 1
-            // And swap it with the current element
-            tempValue = genrePhotos[thisIndex]
-            genrePhotos[thisIndex] = genrePhotos[randomIndex]
-            genrePhotos[randomIndex] = tempValue
-        }
-        return setGenrePhotoArray(genrePhotos)
-    }
-
-    function imageSelected(photoInfo:string) {
+    function imageSelected(photoName:string, photoAlt:string) {
         document.body.style.position = 'fixed'
-        setSelectedImage(photoInfo)
+        setSelectedImage(photoName)
+        setSelectedImageAlt(photoAlt)
         setModalVisibility(true)
     }
+
     function closeModal() {
         document.body.style.position = ''
         setSelectedImage(String)
@@ -106,26 +77,41 @@ export default function PortfolioGenre() {
         return setSelectedImage(newCarouselIndex)
     }
 
-    getGenrePhotos()
+    useEffect(() => {
+        AOS.init({
+            duration: 1200
+        })
 
-    AOS.init({
-        duration: 1200
-    })
+        // Refines genre title to one compatible with photoData
+        let currentGenre:string
+        if (id === 'portraits') {
+            currentGenre = 'portrait'
+        } else if (id === 'couples') {
+            currentGenre = 'couple'
+        } else if (id === 'weddings') {
+            currentGenre = 'wedding'
+        } else {
+            currentGenre = id
+        }
+        let currentGenreName = photoData.filter(x => x.category === currentGenre)
+        setGenrePhotoArray(currentGenreName)
+    }, [id])
 
     return (<div id="genre-container">
         <div className="pageContent">
-            <h1 id="categoryTitle">{GetGenreTitle()}</h1>
+            <h1 id="categoryTitle">{id}</h1>
             <MainPortGenreList genrePhotoArray={genrePhotoArray} imageSelected={imageSelected} />
             {
                 modalVisibility ?
-                <Modal
-                    selectedImage={selectedImage}
-                    modalVisibility={modalVisibility}
-                    closeModal={closeModal}
-                    lastImg={modalLastImg}
-                    nextImg={modalNextImg} />
-                :
-                null
+                    <Modal
+                        selectedImage={selectedImage}
+                        selectedImageAlt={selectedImageAlt}
+                        modalVisibility={modalVisibility}
+                        closeModal={closeModal}
+                        lastImg={modalLastImg}
+                        nextImg={modalNextImg} />
+                    :
+                    ''
             }
             <h1 id="seeMore">See more</h1>
             <PortfolioGenres />
