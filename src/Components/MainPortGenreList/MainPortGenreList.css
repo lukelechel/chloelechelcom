@@ -6,8 +6,7 @@
 .genrePhoto {
     max-width: 40rem;
     max-height: 25rem;
-    margin: 1rem auto;
-    padding: 0 1rem;
+    margin: 0.25rem;
 }
 .genrePhoto:hover {
     cursor: pointer;
