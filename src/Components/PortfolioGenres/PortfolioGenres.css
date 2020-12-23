@@ -57,12 +57,13 @@
     }
     
     #portfolioGenres p {
-        font-size: 1.5rem;
-        font-weight: 800;
+        font-size: 3rem;
+        font-weight: 600;
         text-align: center;
         width: 100%;
+        max-width: 100%;
         color: white;
-        letter-spacing: 5px;
+        letter-spacing: 10px;
         text-transform: uppercase;
         position: absolute;
         top: 50%;
