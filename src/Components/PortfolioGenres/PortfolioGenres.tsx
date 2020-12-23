@@ -10,23 +10,23 @@ const portfolioGenreLibrary = [
     },
     {
         categoryTitle: "nature",
-        fileName: "5740DA5D-ADEA-44A5-BFD3-459B207CB066",
-        alt: "Lilly pads"
+        fileName: "IMG_4283",
+        alt: "Colorful fall trees stand in the background, with a body of water in the foreground"
     },
     {
         categoryTitle: "couples",
-        fileName: "25D111F2-7266-4792-B73E-365BB171438B",
-        alt: "A young couple kisses in the foreground while the sun glistens on a small waterfall in the background"
+        fileName: "IMG_3088",
+        alt: "Young man and woman smile sitting together with her right arm around his back and her left arm on his shoulder"
     },
     {
         categoryTitle: "travel",
-        fileName: "F24CBA41-B716-4A13-B702-85049064DEF1",
-        alt: "Boat on a gray day"
+        fileName: "FE4BC292-A1CD-42F2-BE99-05985320406A-04DE039C-FD03-40DF-BA12-080AB3F38243",
+        alt: "Tall trees with a pink and purple sky in the background"
     },
     {
         categoryTitle: "portraits",
-        fileName: "CAB8171E-3485-4AAB-9875-AD86EF8957CF",
-        alt: "A young woman stands in an open field with her hands behind her head looking into the distance"
+        fileName: "IMG_4374",
+        alt: "Young, sunlit girl standing with her face to the camera with gray sky in the background"
     }
 ]
 

@@ -666,6 +666,13 @@
         "squareable": false
     },
     {
+        "fileName": "IMG_4074",
+        "alt": "Bridesmaids' dresses",
+        "category": "wedding",
+        "orientation": "vertical",
+        "squareable": true
+    },
+    {
         "fileName": "IMG_4167",
         "alt": "Bride applies eye makeup",
         "category": "wedding",
@@ -699,13 +706,6 @@
         "category": "wedding",
         "orientation": "vertical",
         "squareable": false
-    },
-    {
-        "fileName": "IMG_4074",
-        "alt": "Bridesmaids' dresses",
-        "category": "wedding",
-        "orientation": "vertical",
-        "squareable": true
     },
     {
         "fileName": "IMG_2887",
