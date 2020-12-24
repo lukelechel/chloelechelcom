@@ -1,10 +1,11 @@
 #main {
+    display: flex;
     justify-content: space-between;
 }
 
-#mainPhoto {
-    width: 30rem;
-    max-height: 39rem;
+.mainPhoto {
+    max-width: 40rem;
+    max-height: 80vh;
     object-fit: cover;
     animation: fadeInAnimation ease 1.5s 
 }
@@ -19,71 +20,26 @@
 
 #main-text {
     display: block;
+    text-align: right;
+    margin: auto auto 2rem auto;
+}
+#main-text * {
+    max-width: 90%;
+    float: right;
 }
 #main-text h1 {
     font-size: 5rem;
     font-weight: 800;
-    margin-top: -0.75rem;
-    margin-bottom: 2.5rem;
+    line-height: 80%;
     word-spacing: -0.55rem;
 }
 #main-text h2 {
     font-size: 3rem;
-    margin-right: 0.5rem;
 }
-#description {
+#main-text p {
     font-size: 1.5rem;
-}
-
-.workSample {
-    max-width: 100%;
-    object-fit: cover;
-    margin: 3rem 0;
-}
-
-/* ---------------------- */
-/* ---------------------- */
-/* ---- DESKTOP ONLY ---- */
-/* ---------------------- */
-/* ---------------------- */
-
-@media only screen and (min-width: 1300px) {
-
-    #main {
-        display: flex;
-        margin-bottom: 7rem;
-    }
-
-    #main-text {
-        text-align: right;
-        margin: auto 0 3rem 0;
-    }
-    #main-text p {
-        float: right;
-        max-width: 60%;
-    }
-
-    #scrollForMore {
-        font-size: 1.3rem;
-        width: fit-content;
-        position: absolute;
-        bottom: 2.5rem;
-        left: 46%;
-        right: 50%;
-        animation: bounce 0.8s infinite alternate
-    }
-    @keyframes bounce {
-        0% {
-            transform:translateY(0);
-            opacity: 0.7;
-        }
-
-        to {
-            transform:translateY(-10px);
-            opacity: 0.9;
-        }
-    }
-
+    margin: 2rem 0 0 0;
+    max-width: 90%;
 }
 
 /* ---------------------- */
@@ -94,28 +50,16 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1299px) {
 
-    #main {
-        display: flex;
-        margin-bottom: 2rem;
-    }
-
-    #mainPhoto {
-        width: 30rem;
+    .mainPhoto {
+        max-width: 25rem;
         max-height: 39rem;
-        margin: 0 1rem;
     }
 
-    #main-text {
-        text-align: right;
-        margin: auto 2rem 3rem 0;
+    #main-text h1 {
+        font-size: 3.5rem;
     }
-    #main-text p {
-        float: right;
-        max-width: 80%;
-    }
-
-    #scrollForMore {
-        display: none;
+    #main-text h2 {
+        font-size: 2.5rem;
     }
   
 }
@@ -130,38 +74,31 @@
 
     #main {
         display: block;
-        margin-bottom: 5rem;
     }
 
-    #mainPhoto {
+    .mainPhoto {
         width: 100%;
-        max-height: 30rem;
     }
 
     #main-text {
-        text-align: right;
-        margin-top: 1rem;
-        width: 100%;
+        margin: 1rem 3%;
+    }
+    #main-text * {
+        max-width: 100%;
     }
     #main-text h1 {
-        font-size: 5rem;
-        margin-top: -1.25rem;
+        font-size: 3rem;
+        margin: 0;
     }
     #main-text h2 {
-        font-size: 3rem;
-        margin-left: 15%;
+        font-size: 2rem;
+        margin: 0;
     }
     #main-text p {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         text-align: center;
-        max-width: unset;
-        margin: 2rem 0 0 0;
-    }
-
-    .workSample {
         max-width: 100%;
-        object-fit: cover;
-        margin: 0.25rem 0;
+        margin: 2rem 0 4rem 0;
     }
 
 }
