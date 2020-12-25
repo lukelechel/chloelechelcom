@@ -31,7 +31,7 @@ const Home = () => (<div className="pageContent">
             <h2>You're about to look</h2>
             <h1 data-aos="fade-right">so good<span className="desktopOnly">.</span></h1>
             <p>
-                Chloe Lechel is a pro photographer based in Northeastern Indiana.
+                Chloe Lechel is a pro photographer based in northeastern Indiana.
             </p>
         </div>
     </div>

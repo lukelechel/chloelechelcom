@@ -25,7 +25,8 @@ export default function MainPortGenreList(props:any) {
                                 ${workSampleResourceBucket}${x.fileName}-medium.webp 1000w,
                                 ${workSampleResourceBucket}${x.fileName}-large.webp 2000w
                                 `}
-                            type="image/webp" />
+                            type="image/webp"
+                            className="genrePhoto" />
                         <img
                             src={`${workSampleResourceBucket}${x.fileName}.jpg`}
                             alt={x.alt}

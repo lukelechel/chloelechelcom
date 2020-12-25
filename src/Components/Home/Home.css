@@ -77,14 +77,18 @@
     }
 
     .mainPhoto {
+        max-width: 100%;
         width: 100%;
     }
 
     #main-text {
         margin: 1rem 3%;
+        display: block;
     }
     #main-text * {
         max-width: 100%;
+        float: left;
+        clear: both;
     }
     #main-text h1 {
         font-size: 3rem;
@@ -96,7 +100,7 @@
     }
     #main-text p {
         font-size: 1.6rem;
-        text-align: center;
+        text-align: left;
         max-width: 100%;
         margin: 2rem 0 4rem 0;
     }

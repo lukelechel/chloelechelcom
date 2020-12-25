@@ -20,7 +20,15 @@
 
 @media only screen and (max-width: 899px) {
 
-    .genrePhoto {
-        margin: 0.5rem 0;
+    #MainPortGenreList-container {
+        margin: 0;
+        padding: 0;
     }
+
+    .genrePhoto {
+        margin: 0.25rem 0;
+        width: 100%;
+        max-height: unset;
+    }
+
 }
