@@ -39,7 +39,16 @@
 #main-text p {
     font-size: 1.5rem;
     margin: 2rem 0 0 0;
-    max-width: 90%;
+    max-width: 65%;
+}
+
+#see-more-port-section {
+    text-align: center;
+    margin-top: 3rem;
+    clear: both;
+}
+#see-more-port-section h1 {
+    margin-bottom: 1.5rem;
 }
 
 /* ---------------------- */
@@ -60,6 +69,11 @@
     }
     #main-text h2 {
         font-size: 2.5rem;
+    }
+    #main-text p {
+        font-size: 1.5rem;
+        margin: 2rem 0 0 0;
+        max-width: 70%;
     }
   
 }

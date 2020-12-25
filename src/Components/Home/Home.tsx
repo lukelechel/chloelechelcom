@@ -1,7 +1,7 @@
-// import React from 'react'
+import React from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-// import PortfolioGenres from '../PortfolioGenres/PortfolioGenres'
+import PortfolioGenres from '../PortfolioGenres/PortfolioGenres'
 import './Home.css'
 
 AOS.init({
@@ -36,8 +36,10 @@ const Home = () => (<div className="pageContent">
         </div>
     </div>
 
-    {/* <h1>View my portfolio</h1>
-    <PortfolioGenres /> */}
+    <div id="see-more-port-section">
+        <h1>View my portfolio</h1>
+        <PortfolioGenres />
+    </div>
 
 </div>)
 
