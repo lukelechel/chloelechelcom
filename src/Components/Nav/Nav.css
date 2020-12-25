@@ -23,6 +23,11 @@
     margin-right: 2.5rem;
     color: black;
     text-transform: lowercase;
+    transition: 200ms ease-in-out;
+}
+#navList-desktop li:hover * {
+    color: #5cb3c2;
+    transition: 200ms ease-in-out;
 }
 #navList-desktop li:last-child a {
     margin-right: 0;
