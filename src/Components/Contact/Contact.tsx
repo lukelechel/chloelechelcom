@@ -90,7 +90,6 @@ function ContactForm() {
 const Contact = () => (<div>
     <div id="contact-page-info">
         <h1>Contact</h1>
-        <p>Words</p>
     </div>
     <ContactForm />
 </div>)

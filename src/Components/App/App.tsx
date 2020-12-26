@@ -7,7 +7,7 @@ import Home from '../Home/Home'
 import Portfolio from '../Portfolio/Portfolio'
 import PortfolioGenre from '../PortfolioGenre/PortfolioGenre'
 import About from '../About/About'
-import Contact from '../Contact/Contact'
+// import Contact from '../Contact/Contact'
 import Error from '../Error/Error'
 
 const App = () => (<BrowserRouter>
@@ -32,10 +32,10 @@ const App = () => (<BrowserRouter>
             <About />
         </Route>
 
-        <Route path="/contact">
+        {/* <Route path="/contact">
             <Nav />
             <Contact />
-        </Route>
+        </Route> */}
 
         <Route>
             <Nav />

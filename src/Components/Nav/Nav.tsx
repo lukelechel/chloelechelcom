@@ -15,11 +15,11 @@ const navLibrary = [
     {
         name: "Instagram",
         link: "https://instagram.com/chloelechelphotography"
-    },
-    {
-        name: "Contact",
-        link: "/contact"
     }
+    // {
+    //     name: "Contact",
+    //     link: "/contact"
+    // }
 ]
 
 export default function Nav() {
