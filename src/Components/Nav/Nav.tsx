@@ -6,18 +6,19 @@ const baseResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazon
 const navLibrary = [
     {
         name: "Portfolio",
-        link: "/portfolio",
-        alt: "Portfolio"
+        link: "/portfolio"
     },
     {
         name: "About",
-        link: "/about",
-        alt: "About"
+        link: "/about"
     },
     {
         name: "Instagram",
-        link: "https://instagram.com/chloelechelphotography",
-        alt: "Chloe Lechel Photography on Instagram"
+        link: "https://instagram.com/chloelechelphotography"
+    },
+    {
+        name: "Contact",
+        link: "/contact"
     }
 ]
 
