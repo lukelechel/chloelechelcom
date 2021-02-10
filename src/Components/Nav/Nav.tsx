@@ -44,13 +44,11 @@ export default function Nav() {
         </div>
 
         <div id="navBar-mobile" className="mobileOnly">
-            <picture>
-                <img
-                    src={`${baseResourceBucket}menu-black.svg`}
-                    alt="Navigation list icon"
-                    id="menuIcon"
-                    onClick={toggleNavList} />
-            </picture>
+            <img
+                src={`${baseResourceBucket}menu-black.svg`}
+                alt="Navigation list icon"
+                id="menuIcon"
+                onClick={toggleNavList} />
             <a href="/">
                 <h1>Chloe Lechel</h1>
             </a>

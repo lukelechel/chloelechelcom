@@ -13,20 +13,10 @@ const baseResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazon
 
 const Home = () => (<div className="pageContent">
     <div id="main">
-        <picture>
-            <source
-                srcSet={`
-                        ${baseResourceBucket}mainProfile-small.webp 400w,
-                        ${baseResourceBucket}mainProfile-medium.webp 1000w,
-                        ${baseResourceBucket}mainProfile-large.webp 2000w
-                        `}
-                type="image/webp"
-                className="mainPhoto" />
-            <img
-                src={`${baseResourceBucket}mainProfile.jpg`}
-                alt="Chloe Lechel profile"
-                className="mainPhoto" />
-        </picture>
+        <img
+            src={`${baseResourceBucket}mainProfile.jpg`}
+            alt="Chloe Lechel profile"
+            className="mainPhoto" />
         <div id="main-text">
             <h2>You're about to look</h2>
             <h1 data-aos="fade-right">so good<span className="desktopOnly">.</span></h1>

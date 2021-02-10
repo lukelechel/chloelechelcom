@@ -1,6 +1,6 @@
 import './Modal.css'
 
-const workSampleResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/work-samples/"
+const workSampleResourceBucket = "https://d26jazm7hunrwx.cloudfront.net/work-samples/"
 
 export default function Modal(props:any) {
 
