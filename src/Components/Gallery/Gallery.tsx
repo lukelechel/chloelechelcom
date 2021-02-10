@@ -3,12 +3,12 @@ import photoData from '../../PhotoData.json'
 
 const horizontalImgs = photoData.filter(x => x.orientation === 'horizontal')
 const squareableImgs = photoData.filter(x => x.squareable === true)
-const workSampleResourceBucket = "https://workSampleResourceBucket/work-samples/"
+const workSampleResourceBucket = "https://d26jazm7hunrwx.cloudfront.net/work-samples/"
 
 function getRandomHorizontalImg() {
     let randomHorizontalImg = horizontalImgs[Math.floor(Math.random() * horizontalImgs.length)]
     return (<img
-        src={`https://${workSampleResourceBucket}${randomHorizontalImg.fileName}.jpg`}
+        src={`${workSampleResourceBucket}${randomHorizontalImg.fileName}.jpg`}
         alt={randomHorizontalImg.alt}
         width={randomHorizontalImg.width}
         height={randomHorizontalImg.height}
@@ -18,7 +18,7 @@ function getRandomHorizontalImg() {
 function getRandomSquareableImg() {
     let randomSquareableImg = squareableImgs[Math.floor(Math.random() * squareableImgs.length)]
     return (<img
-        src={`https://${workSampleResourceBucket}${randomSquareableImg.fileName}.jpg`}
+        src={`${workSampleResourceBucket}${randomSquareableImg.fileName}.jpg`}
         alt={randomSquareableImg.alt}
         width={randomSquareableImg.width}
         height={randomSquareableImg.height}
