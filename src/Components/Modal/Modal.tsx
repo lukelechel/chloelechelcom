@@ -8,7 +8,7 @@ export default function Modal(props:any) {
     const photoAlt:string = props.selectedImageAlt
     return (
         <div id="modal-container" className={props.modalVisibility ? 'modalVisible' : 'modalInvisible'}>
-            <button id="modal-close" onClick={props.closeModal}>×</button>
+            <div id="modal-close" onClick={props.closeModal}>×</div>
             <img
                 src={`${workSampleResourceBucket}${photoName}.jpg`}
                 alt={photoAlt}

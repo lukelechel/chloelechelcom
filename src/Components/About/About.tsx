@@ -4,20 +4,11 @@ const emoji = require("emoji-dictionary")
 const baseResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
 
 const About = () => (<div id="about-container" className="pageContent">
-    <picture>
-        <source
-            srcSet={`
-                ${baseResourceBucket}aboutProfile-small.webp 400w,
-                ${baseResourceBucket}aboutProfile-medium.webp 1000w,
-                ${baseResourceBucket}aboutProfile-large.webp 2000w
-                `}
-            type="image/webp"
-            id="aboutProfile" />
-        <img
-            src={`${baseResourceBucket}aboutProfile.jpg`}
-            alt="In the foreground, the sun shines on Chloe's face. A body of water and trees are in the background."
-            id="aboutProfile" />
-    </picture>
+    <img
+        src={`${baseResourceBucket}aboutProfile.jpg`}
+        alt="In the foreground, the sun shines on Chloe's face. A body of water and trees are in the background."
+        loading="lazy"
+        id="aboutProfile" />
     <div id="about-words">
         <h1>About the photographer</h1>
         <p>Hi, I'm Chloe. <span role="img" aria-label={emoji.getName("🥰")}>🥰</span></p>
