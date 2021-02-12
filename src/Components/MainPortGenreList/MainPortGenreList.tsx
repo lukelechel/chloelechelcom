@@ -21,7 +21,7 @@ export default function MainPortGenreList(props:any) {
             <img
                 key={i}
                 onClick={() => props.imageSelected(x.fileName, x.alt, x.width, x.height)}
-                src={`${workSampleResourceBucket}${x.fileName}.jpg`}
+                src={`${workSampleResourceBucket}${x.fileName}-small.jpg`}
                 alt={x.alt}
                 max-width={x.width}
                 loading="lazy"

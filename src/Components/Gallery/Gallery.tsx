@@ -8,7 +8,7 @@ const workSampleResourceBucket = "https://d26jazm7hunrwx.cloudfront.net/work-sam
 function getRandomHorizontalImg() {
     let randomHorizontalImg = horizontalImgs[Math.floor(Math.random() * horizontalImgs.length)]
     return (<img
-        src={`${workSampleResourceBucket}${randomHorizontalImg.fileName}.jpg`}
+        src={`${workSampleResourceBucket}${randomHorizontalImg.fileName}-small.jpg`}
         alt={randomHorizontalImg.alt}
         width={randomHorizontalImg.width}
         height={randomHorizontalImg.height}
@@ -18,7 +18,7 @@ function getRandomHorizontalImg() {
 function getRandomSquareableImg() {
     let randomSquareableImg = squareableImgs[Math.floor(Math.random() * squareableImgs.length)]
     return (<img
-        src={`${workSampleResourceBucket}${randomSquareableImg.fileName}.jpg`}
+        src={`${workSampleResourceBucket}${randomSquareableImg.fileName}-small.jpg`}
         alt={randomSquareableImg.alt}
         width={randomSquareableImg.width}
         height={randomSquareableImg.height}

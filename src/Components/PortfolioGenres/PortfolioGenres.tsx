@@ -38,7 +38,7 @@ const PortfolioGenres = () => (<ul id="portfolioGenres">
                 <li key={x.categoryTitle}>
                     <Link to={`/portfolio/${x.categoryTitle}`}>
                         <img
-                            src={`${workSampleResourceBucket}${x.fileName}.jpg`}
+                            src={`${workSampleResourceBucket}${x.fileName}-small.jpg`}
                             alt={x.alt}
                             loading="eager" />
                         <p>{x.categoryTitle}</p>
