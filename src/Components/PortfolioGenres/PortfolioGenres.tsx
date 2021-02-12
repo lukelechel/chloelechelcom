@@ -1,4 +1,5 @@
 import './PortfolioGenres.css'
+import { Link } from 'react-router-dom'
 
 const workSampleResourceBucket = "https://d26jazm7hunrwx.cloudfront.net/work-samples/"
 
@@ -35,12 +36,13 @@ const PortfolioGenres = () => (<ul id="portfolioGenres">
         portfolioGenreLibrary.map(x => {
             return (
                 <li key={x.categoryTitle}>
-                    <a href={`/portfolio/${x.categoryTitle}`}>
+                    <Link to={`/portfolio/${x.categoryTitle}`}>
                         <img
                             src={`${workSampleResourceBucket}${x.fileName}.jpg`}
-                            alt={x.alt} />
+                            alt={x.alt}
+                            loading="eager" />
                         <p>{x.categoryTitle}</p>
-                    </a>
+                    </Link>
                 </li>
             )
         })

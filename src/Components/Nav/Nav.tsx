@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Nav.css'
 
 const baseResourceBucket = "https://chloelechelcom-resources.s3.us-east-2.amazonaws.com/"
@@ -29,14 +30,14 @@ export default function Nav() {
     
     return (<div id="navBar-container">
         <div id="navBar-desktop" className="desktopOnly">
-            <a href="/" id="siteTitle">
+            <Link to="/" id="siteTitle">
                 <h1>Chloe Lechel</h1>
-            </a>
+            </Link>
             <ul id="navList-desktop">
                 {
                     navLibrary.map(x => { return (
                         <li key={x.name}>
-                            <a href={x.link} rel="noopener noreferrer">{x.name}</a>
+                            <Link to={x.link} rel="noopener noreferrer">{x.name}</Link>
                         </li>
                     )})
                 }
@@ -49,15 +50,15 @@ export default function Nav() {
                 alt="Navigation list icon"
                 id="menuIcon"
                 onClick={toggleNavList} />
-            <a href="/">
+            <Link to="/">
                 <h1>Chloe Lechel</h1>
-            </a>
+            </Link>
         </div>
         <ul id="mobile-nav" className={menuListOpen === true ? 'visible' : 'invisible'}>
             {
                 navLibrary.map(x => { return (
                     <li key={x.name}>
-                        <a href={x.link} rel="noopener noreferrer">{x.name}</a>
+                        <Link to={x.link} rel="noopener noreferrer">{x.name}</Link>
                     </li>
                 )})
             }
