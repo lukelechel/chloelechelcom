@@ -24,7 +24,6 @@ export default function MainPortGenreList(props:any) {
                 src={`${workSampleResourceBucket}${x.fileName}.jpg`}
                 alt={x.alt}
                 max-width={x.width}
-                height={x.height}
                 loading="lazy"
                 className="genrePhoto"
                     data-aos="fade-up"
