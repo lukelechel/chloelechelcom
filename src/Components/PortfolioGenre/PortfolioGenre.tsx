@@ -62,10 +62,12 @@ export default function PortfolioGenre() {
     function modalNextImg() {
         // initially selected img object, will update
         let carouselIndex = genrePhotoArray.findIndex(x => x.fileName === selectedImage)
+        // length of carousel
+        let carouselLength = genrePhotoArray.length
         // get index pos of selected img object
         let indexOfSelectedImg = genrePhotoArray.findIndex(x => x.fileName === selectedImage)
 
-        if (indexOfSelectedImg === carouselIndex - 1) {
+        if (indexOfSelectedImg === carouselLength - 1) {
             carouselIndex = 0
         } else {
             carouselIndex = indexOfSelectedImg + 1

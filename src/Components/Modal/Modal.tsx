@@ -6,6 +6,7 @@ export default function Modal(props:any) {
 
     const photoName:string = props.selectedImage
     const photoAlt:string = props.selectedImageAlt
+    
     return (
         <div id="modal-container" className={props.modalVisibility ? 'modalVisible' : 'modalInvisible'}>
             <div id="modal-close" onClick={props.closeModal}>×</div>
